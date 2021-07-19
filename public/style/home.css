@@ -25,6 +25,9 @@ h2 {
 .neonText {
     color: #fff;
     animation: neon 1.5s ease-in-out infinite alternate;
+    font-family: 'Nixie One';
+    font-weight: 400;
+    font-size: 4rem;
 }
 
 @keyframes neon {
