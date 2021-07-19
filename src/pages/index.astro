@@ -2,6 +2,7 @@
 // Component Imports
 import MailingList from '../components/MailingList.astro';
 let title = 'Euruko 2022';
+let socialImage = `${Astro.site || "/"}assets/social.jpg`;
 ---
 <html lang="en">
 <head>
@@ -22,12 +23,12 @@ let title = 'Euruko 2022';
     <meta name="twitter:creator" content="@euruko" />
     <meta property="twitter:title" content="Euruko '22" />
     <meta property="twitter:description" content="We're aiming to hold an in-person Euruko in Helsinki sometime in the last quarter of 2022. At this time we can't offer any more details about the event." />
-    <meta property="twitter:image" content="{Astro.site}/assets/social.jpg" />
+    <meta property="twitter:image" content="{socialImage}" />
 
     <meta property="og:type" content="website">
     <meta property="og:title" content="Euruko '22">
     <meta property="og:description" content="We're aiming to hold an in-person Euruko in Helsinki sometime in the last quarter of 2022. At this time we can't offer any more details about the event.">
-    <meta property="og:image" content="{Astro.site}/assets/social.jpg">
+    <meta property="og:image" content="{socialImage}">
     <meta property="og:url" content="{Astro.site}">
 </head>
 <body>
