@@ -1,56 +1,44 @@
 ---
 // Component Imports
-import Tour from '../components/Tour.astro';
-// You can import components from any supported Framework here!
-
-
-// Component Script:
-// You can write any JavaScript/TypeScript that you'd like here.
-// It will run during the build, but never in the browser.
-// All variables are available to use in the HTML template below.
-let title = 'My Astro Site';
-
-// Full Astro Component Syntax:
-// https://github.com/snowpackjs/astro/blob/main/docs/core-concepts/astro-components.md
+import MailingList from '../components/MailingList.astro';
+let title = 'Euruko 2022';
 ---
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>{title}</title>
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    <link rel="icon" type="image/png" href="/favicon.png" />
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#f15a5b" />
+
     <link rel="stylesheet" href="/style/global.css">
     <link rel="stylesheet" href="/style/home.css">
+    <link href="https://fonts.googleapis.com/css?family=Be+Vietnam:500,500i,700,700i,800,800i&amp;display=swap" rel="stylesheet">
 
-    <style>
-        header {
-            display: flex;
-            flex-direction: column;
-            gap: 1em;
-            max-width: min(100%, 68ch);
-        }
-    </style>
+    <link rel="canonical" href="{Astro.site}">
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@euruko" />
+    <meta name="twitter:creator" content="@euruko" />
+    <meta property="twitter:title" content="Euruko '22" />
+    <meta property="twitter:description" content="We're aiming to hold an in-person Euruko in Helsinki sometime in the last quarter of 2022. At this time we can't offer any more details about the event." />
+    <meta property="twitter:image" content="{Astro.site}/assets/social.jpg" />
+
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Euruko '22">
+    <meta property="og:description" content="We're aiming to hold an in-person Euruko in Helsinki sometime in the last quarter of 2022. At this time we can't offer any more details about the event.">
+    <meta property="og:image" content="{Astro.site}/assets/social.jpg">
+    <meta property="og:url" content="{Astro.site}">
 </head>
 <body>
     <main>
         <header>
             <div>
-                <img width="60" height="80" src="/assets/logo.svg" alt="Astro logo">
-                <h1>Welcome to <a href="https://astro.build/">Astro</a></h1>
+                <img width="1280" height="300" src="/assets/euruko-glow.svg" alt="Euruko logo">
+                <h1 class="neonText">2022Q3</h1>
             </div>
         </header>
-
-        <Tour />
-
-        <!--
-           - You can also use imported framework components directly in your markup!
-           -
-           - Note: by default, these components are NOT interactive on the client.
-           - The `:visible` directive tells Astro to make it interactive.
-           -
-           - See https://github.com/snowpackjs/astro/blob/main/docs/core-concepts/component-hydration.md 
-           -->
-
+        <MailingList />
     </main>
 </body>
 </html>
