@@ -24,10 +24,16 @@ h2 {
 
 .neonText {
     color: #fff;
-    text-shadow:
-      0 0 3px #fff,
-      0 0 5px #fff,
-      0 0 11px #fff,
-      0 0 21px #d7aaff,
-      0 0 41px #d7aaff;
-  }
+    animation: neon 1.5s ease-in-out infinite alternate;
+}
+
+@keyframes neon {
+    from {
+        text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #d7aaff,
+        0 0 70px #d7aaff, 0 0 80px #d7aaff, 0 0 100px #d7aaff, 0 0 150px #d7aaff;
+    }
+    to {
+        text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #d7aaff,
+        0 0 35px #d7aaff, 0 0 40px #d7aaff, 0 0 50px #d7aaff, 0 0 75px #d7aaff;
+    }
+}
