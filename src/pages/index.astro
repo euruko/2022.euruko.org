@@ -1,8 +1,12 @@
 ---
 // Component Imports
 import MailingList from '../components/MailingList.astro';
+
+import socialImage from "../images/social.png";
+import logo from "../images/euruko-glow.svg";
+
 let title = 'Euruko 2022';
-let socialImage = `${Astro.site || "/"}assets/social.jpg`;
+let socialImageUrl = new URL(socialImage, Astro.site);
 ---
 <html lang="en">
 <head>
@@ -16,7 +20,7 @@ let socialImage = `${Astro.site || "/"}assets/social.jpg`;
     <link rel="stylesheet" href="/style/home.css">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css?family=Be+Vietnam:500,700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Nixie+One&display=swap&display=swap&text=2022Q3" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Nixie+One&display=swap&display=swap&text=2022Q4" rel="stylesheet">
 
     <link rel="canonical" href="{Astro.site}">
 
@@ -25,20 +29,20 @@ let socialImage = `${Astro.site || "/"}assets/social.jpg`;
     <meta name="twitter:creator" content="@euruko" />
     <meta property="twitter:title" content="Euruko '22" />
     <meta property="twitter:description" content="We're aiming to hold an in-person Euruko in Helsinki sometime in the last quarter of 2022. At this time we can't offer any more details about the event." />
-    <meta property="twitter:image" content="{socialImage}" />
+    <meta property="twitter:image" content="{socialImageUrl}" />
 
     <meta property="og:type" content="website">
     <meta property="og:title" content="Euruko '22">
     <meta property="og:description" content="We're aiming to hold an in-person Euruko in Helsinki sometime in the last quarter of 2022. At this time we can't offer any more details about the event.">
-    <meta property="og:image" content="{socialImage}">
+    <meta property="og:image" content="{socialImageUrl}">
     <meta property="og:url" content="{Astro.site}">
 </head>
 <body>
     <main>
         <header>
             <div>
-                <img width="1280" height="300" src="/assets/euruko-glow.svg" alt="Euruko">
-                <h1 class="neonText">2022Q3</h1>
+                <img width="1280" height="300" src="{logo}" alt="Euruko">
+                <h1 class="neonText">2022Q4</h1>
             </div>
         </header>
 
