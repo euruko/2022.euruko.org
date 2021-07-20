@@ -8,19 +8,24 @@ import { Markdown } from 'astro/components';
     </div>
 
     <section>
-        <form action="https://tinyletter.com/euruko" method="post" target="popupwindow" onsubmit="window.open('https://tinyletter.com/euruko2022', 'popupwindow', 'scrollbars=yes,width=800,height=600');return true">
+        <form
+            action="https://buttondown.email/api/emails/embed-subscribe/euruko"
+            method="post"
+            target="popupwindow"
+            onsubmit="window.open('https://buttondown.email/euruko', 'popupwindow')"
+            class="embeddable-buttondown-form"
+        >
             <div>
-                <label for="tlemail" class="form-title">Enter your email address</label>
+                <label for="bd-email" class="form-title">Enter your email address</label>
             </div>
             <div class="form-inputs">
-                <input type="email" name="email" id="tlemail" class="form-email" placeholder="Your email address" required />
+                <input type="email" name="email" id="bd-email" class="form-email" placeholder="Your email address" required />
+                <input type="hidden" value="1" name="embed" />
                 <input type="submit" value="Subscribe" class="form-submit" />
             </div>
-
-            <input type="hidden" value="1" name="embed"/>
-            <div>
-                <a href="https://tinyletter.com" target="_blank">powered by TinyLetter</a>
-            </div>
+            <p>
+                <a href="https://buttondown.email" target="_blank" rel="nofollow noopener">Powered by Buttondown.</a>
+            </p>
         </form>
     </section>
 </article>
