@@ -1,5 +1,5 @@
 ---
-// Component Imports
+import { Markdown } from 'astro/components';
 import Header from "../components/Header.astro";
 import MailingList from '../components/MailingList.astro';
 
@@ -42,6 +42,10 @@ let socialImageUrl = new URL("/assets/social.png", Astro.site);
         <Header />
 
         <MailingList />
+
+        <Markdown>
+        In the meantime, you can watch the talks from Euruko 2021 on [YouTube](https://www.youtube.com/channel/UCgXsZr2e0AgUJMZm5t03WVw) or follow [@euruko](https://twitter.com/euruko) on Twitter.
+        </Markdown>
     </main>
     <!-- Cloudflare Web Analytics --><script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='&lbrace;"token": "72eb734d9e0b4751a41648994b493fa9"&rbrace;'></script><!-- End Cloudflare Web Analytics -->
 </body>

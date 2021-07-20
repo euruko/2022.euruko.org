@@ -33,6 +33,10 @@ body {
   color: #ffffff;
 }
 
+a {
+  color: #f1e1ff;
+}
+
 header {
   display: flex;
   flex-direction: column;
