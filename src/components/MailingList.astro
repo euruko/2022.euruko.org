@@ -145,5 +145,16 @@ import { Markdown } from 'astro/components';
             font-size: 16px;
             width: 200px;
         }
+        .form-inputs {
+            flex-direction: column;
+        }
+
+        .form-inputs > *:not(:first-child) {
+            margin-top: 8px;
+        }
+
+        .form-submit {
+            width: 100%;
+        }
     }
 </style>
