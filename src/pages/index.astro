@@ -1,12 +1,10 @@
 ---
 // Component Imports
+import Header from "../components/Header.astro";
 import MailingList from '../components/MailingList.astro';
 
-import socialImage from "../images/social.png";
-import logo from "../images/euruko-glow.svg";
-
 let title = 'Euruko 2022';
-let socialImageUrl = new URL(socialImage, Astro.site);
+let socialImageUrl = new URL("/assets/social.png", Astro.site);
 ---
 <html lang="en">
 <head>
@@ -39,12 +37,7 @@ let socialImageUrl = new URL(socialImage, Astro.site);
 </head>
 <body>
     <main>
-        <header>
-            <div>
-                <img width="1280" height="300" src="{logo}" alt="Euruko">
-                <h1 class="neonText">2022Q4</h1>
-            </div>
-        </header>
+        <Header />
 
         <MailingList />
     </main>
