@@ -1,10 +1,12 @@
-# Welcome to [Astro](https://astro.build)
+# Euruko 2022
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+💎 The Euruko 2022 site hosted at [https://2022.euruko.org](2022.euruko.org).
+
+🔥 Note that the `main` branch of this repository is **automatically** deployed to production. Use branches and PRs if you don't want your changes to go live immediately.
 
 ## 🚀 Project Structure
 
-Inside of your Astro project, you'll see the following folders and files:
+The site uses [Astro](https://docs.astro.build). Inside of your Astro project, you'll see the following folders and files:
 
 ```
 /
@@ -34,7 +36,3 @@ All commands are run from the root of the project, from a terminal:
 | `npm install`   | Installs dependencies                       |
 | `npm run start` | Starts local dev server at `localhost:3000` |
 | `npm run build` | Build your production site to `./dist/`     |
-
-## 👀 Want to learn more?
-
-Feel free to check [our documentation](https://github.com/snowpackjs/astro) or jump into our [Discord server](https://astro.build/chat).
