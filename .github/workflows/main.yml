@@ -8,6 +8,7 @@ jobs:
     runs-on: ubuntu-latest
     env:
       BUNDLE_WITH: test
+      BRIDGETOWN_ENV: production
     steps:
       - uses: actions/checkout@master
 
@@ -26,11 +27,8 @@ jobs:
           ruby-version: 2.7
           bundler-cache: true
 
-      - name: Build the site
-        run: yarn build
-
-      - name: Run the tests
-        run: yarn test
+      - name: Build and test
+        run: yarn deploy:test
 
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@4.1.4
