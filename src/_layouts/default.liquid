@@ -1,0 +1,15 @@
+<!doctype html>
+<html lang="{% if page.lang == blank %}{{ site.metadata.lang }}{% else %}{{ page.lang }}{% endif %}">
+  <head>
+    {% render "head", site: site, metadata: site.metadata, title: page.title, page: page %}
+  </head>
+  <body class="{{ page.layout }} {{ page.page_class }}">
+    {% render "navbar", metadata: site.metadata, page: page %}
+
+    <main>
+      {{ content }}
+    </main>
+
+    {% render "footer", metadata: site.metadata %}
+  </body>
+</html>

@@ -1,22 +1,37 @@
-name: Build and Deploy
-on:
-  push:
-    branches:
-      - main
-jobs:
-  build-and-deploy:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout 🛎️
-        uses: actions/checkout@v2
+name: Build
 
-      - name: Install and Build
-        run: |
-          npm install
-          npm run build
+on: push
+
+jobs:
+  test:
+    name: Test (and optionally deploy)
+    runs-on: ubuntu-latest
+    env:
+      BUNDLE_WITH: test
+    steps:
+      - uses: actions/checkout@master
+
+      - name: Setup Node
+        uses: actions/setup-node@v2
+        with:
+          node-version: "14"
+          cache: yarn
+
+      - name: "Install dependencies with Yarn"
+        run: yarn install
+
+      - name: Set up Ruby 2.7
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: 2.7
+          bundler-cache: true
+
+      - name: Build the site and run tests
+        run: yarn test
 
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@4.1.4
+        if: ${{ success() && github.ref == 'ref/head/main' }}
         with:
           branch: gh-pages
-          folder: dist
+          folder: output

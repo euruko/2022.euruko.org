@@ -1,0 +1,15 @@
+# Site settings
+# These are used to personalize your new site. If you look in the HTML files,
+# you will see them accessed via {{ site.metadata.title }}, {{ site.metadata.email }}, and so on.
+# You can create any custom variable you would like, and they will be accessible
+# in the templates via {{ site.metadata.myvariable }}.
+
+lang: en
+title: Euruko 2022
+tagline: Europe's biggest and oldest Ruby conference
+email: contact@euruko.org
+organisation: Euruko / Helsinki Ruby ry
+description: >-
+  Euruko 2022 will be held in online and at Paasitorni in Helsinki, Finland. This year we're taking a hybrid approach to the conference to make it equally good for both in-person and remote participants.
+prefetch:
+  - "/"
