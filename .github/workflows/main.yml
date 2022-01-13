@@ -1,10 +1,10 @@
-name: Build and Deploy
+name: Build
 
 on: push
 
 jobs:
-  build-and-deploy:
-    name: Build and test
+  test:
+    name: Test (and optionally deploy)
     runs-on: ubuntu-latest
     env:
       BUNDLE_WITH: test
