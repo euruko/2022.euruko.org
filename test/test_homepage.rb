@@ -6,7 +6,7 @@ class TestHomepage < Minitest::Test
       document_root page
     end
     should "exist" do
-      assert_select "h1", "Euruko 2022"
+      assert_select "p", "Euruko 2022"
     end
   end
 
