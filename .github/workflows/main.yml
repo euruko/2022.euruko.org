@@ -27,7 +27,7 @@ jobs:
           bundler-cache: true
 
       - name: Build the site and run tests
-        run: yarn test
+        run: yarn test --verbose
 
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@4.1.4
