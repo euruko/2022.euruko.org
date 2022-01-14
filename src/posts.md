@@ -6,9 +6,9 @@ sitemap: false
 ---
 
 <ul>
-  {% for post in site.posts %}
+  {% for post in collections.posts.resources %}
     <li>
-      <a href="{{ post.url }}">{{ post.title }}</a>
+      <a href="{{ post.url }}">{{ post.data.title }}</a>
     </li>
   {% endfor %}
 </ul>
