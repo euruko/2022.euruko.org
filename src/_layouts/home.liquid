@@ -2,4 +2,7 @@
 layout: default
 ---
 
-{{ content }}
+{% render "hero", site: site, page: page %}
+{% rendercontent "content" %}
+  {{ content }}
+{% endrendercontent %}
