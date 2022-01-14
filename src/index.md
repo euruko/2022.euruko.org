@@ -5,7 +5,7 @@ title: ""
 
 {% render "home/hero", site: site, page: page %}
 {% render "home/about" %}
-{% render "home/mailing_list" %}
+{% render "home/newsletter" %}
 {% render "home/speakers", collections: collections %}
 {% render "home/benefits", collections: collections %}
 {% render "home/sponsors", collections: collections %}
