@@ -3,6 +3,9 @@ layout: home
 title: ""
 ---
 
+{% render "home/hero", site: site, page: page %}
+{% render "home/about" %}
+<!--
 <header>
   <div>
     <img width="1280" height="300" src="{% webpack_path images/euruko-glow.svg %}" alt="Euruko">
@@ -48,3 +51,4 @@ title: ""
 </article>
 
 In the meantime, you can watch the talks from Euruko 2021 on [YouTube](https://www.youtube.com/euruko) or follow [@euruko](https://twitter.com/euruko) on Twitter.
+-->
