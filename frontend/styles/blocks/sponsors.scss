@@ -2,6 +2,18 @@
 @use "~sass-mq/mq.scss";
 
 .sponsors {
+  &__card {
+    position: relative;
+    flex-basis: calc(50% - 20px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    @include mq.mq($until: desktop) {
+      flex-basis: calc(100% - 20px);
+    }
+  }
+
   &__link {
     position: relative;
     flex-basis: calc(50% - 20px);
@@ -14,10 +26,6 @@
     border-radius: 50px;
     text-decoration: none;
     transition: all 0.15s ease-in-out;
-
-    @include mq.mq($until: desktop) {
-      flex-basis: calc(100% - 20px);
-    }
 
     &:hover {
       box-shadow: inset 0 0 0 2px $teal;
