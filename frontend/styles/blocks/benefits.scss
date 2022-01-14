@@ -1,36 +1,36 @@
 @use "imports/variables.scss" as *;
 @use "~sass-mq/mq.scss";
 
-.helsinki {
-  &__facts {
+.benefits {
+  &__cards {
     display: flex;
     flex-wrap: wrap;
     margin: -60px -2% 0 -2%;
   }
 
-  &__fact {
+  &__card {
     padding: 60px 2% 0 2%;
     flex-basis: 25%;
   }
 
   @include mq.mq($until: desktop) {
-    &__fact {
+    &__card {
       flex-basis: 50%;
     }
   }
 
   @include mq.mq($until: largeTablet) {
-    &__facts {
+    &__card {
       margin: -40px -10px 0 -10px;
     }
 
-    &__fact {
+    &__card {
       padding: 40px 10px 0 10px;
     }
   }
 
   @include mq.mq($until: tablet) {
-    &__fact {
+    &__card {
       flex-basis: 50%;
     }
   }

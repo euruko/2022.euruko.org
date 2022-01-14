@@ -28,6 +28,10 @@ timezone: Europe/Helsinki
 # pagination:
 #   enabled: true
 
+collections:
+  - speakers
+  - benefits
+
 include:
   - .nojekyll
   - _redirects

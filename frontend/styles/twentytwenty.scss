@@ -14,11 +14,12 @@
  /*
    Blocks
   */
- @use "blocks/factbox.scss";
+ @use "blocks/about.scss";
+ @use "blocks/benefits.scss";
+ @use "blocks/cardbox.scss";
  @use "blocks/footer.scss";
  @use "blocks/form.scss";
  @use "blocks/header.scss";
- @use "blocks/helsinki.scss";
  @use "blocks/hero.scss";
  @use "blocks/jobs.scss";
  @use "blocks/profile.scss";
@@ -26,6 +27,5 @@
  @use "blocks/section.scss";
  @use "blocks/speakers.scss";
  @use "blocks/sponsors.scss";
- @use "blocks/about.scss";
  @use "blocks/table.scss";
  @use "blocks/video.scss";

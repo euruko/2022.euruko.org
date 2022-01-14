@@ -1,6 +1,6 @@
 @use "imports/variables.scss" as *;
 
-.factbox {
+.cardbox {
   position: relative;
   text-decoration: none;
 
@@ -29,11 +29,11 @@
     transition: all 0.15s ease-in-out;
     transform: translate(2px, -2px);
 
-    .factbox:hover & {
+    .cardbox:hover & {
       transform: translate(6px, -6px);
     }
 
-    .factbox:active & {
+    .cardbox:active & {
       transform: translate(-2px, 2px);
     }
 
@@ -55,7 +55,7 @@
     margin-top: 16px;
     transition: all 0.15s ease-in-out;
 
-    .factbox:hover & {
+    .cardbox:hover & {
       text-decoration: underline;
     }
   }

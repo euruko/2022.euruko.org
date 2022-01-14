@@ -1,0 +1,21 @@
+<div class="benefits__card">
+  <a
+    href="{{ card.url }}"
+    target="_blank"
+    rel="noopener noreferrer"
+    class="cardbox"
+  >
+    <div class="cardbox__container">
+      <div class="cardbox__background"></div>
+      <div class="cardbox__image">
+        <img
+          src="{{ image }}"
+          alt="{{ card.name }}"
+          loading="lazy"
+        />
+      </div>
+    </div>
+    <span class="cardbox__name"> {{ card.name }} </span>
+  </a>
+  <p class="benefits__description">{{ content }}</p>
+</div>
