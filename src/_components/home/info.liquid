@@ -1,0 +1,23 @@
+<section id="info" class="section">
+  <div class="section__container">
+    <div class="section__inner-container">
+      <div class="section__columns">
+        <div class="section__small-column">
+          <h1 id="heading-info" class="section__heading section__heading--teal">
+            {{ title }}
+          </h1>
+          {% if info != blank %}
+          <p class="section__info">
+            {{ description }}
+          </p>
+          {% endif %}
+        </div>
+        <div class="section__large-column">
+          <div class="section__content">
+            {{ content }}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
