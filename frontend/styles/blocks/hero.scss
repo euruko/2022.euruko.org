@@ -1,0 +1,222 @@
+@use "imports/variables.scss" as *;
+@use "~sass-mq/mq.scss";
+
+.hero {
+  position: relative;
+  width: 100%;
+  min-height: 900px;
+  height: 100vh;
+  max-height: 1600px;
+  background: $purple-2;
+  overflow: hidden;
+
+  &__container {
+    position: relative;
+    max-width: 1300px;
+    height: 100%;
+    margin: 0 auto;
+  }
+
+  &__image-container {
+    position: absolute;
+    left: 0px;
+    top: calc(50% + (#{$header-height} / 2));
+    transform: translate(0, -50%);
+  }
+
+  &__image {
+    width: 900px;
+    height: auto;
+  }
+
+  &__info {
+    position: absolute;
+    top: calc(51% + (#{$header-height} / 2) + 5px);
+    right: 0px;
+    font-size: 1.5rem;
+    line-height: 1.4;
+    font-weight: $semibold;
+    color: $purple-3;
+
+    a {
+      color: #fff;
+      transition: all 0.1s ease-in-out;
+
+      &:hover {
+        color: $pink-light;
+      }
+    }
+  }
+
+  &__cta {
+    display: inline-flex;
+    align-items: flex-end;
+    text-decoration: none;
+    margin-top: 30px;
+
+    & > span {
+      padding-bottom: 7px;
+      border-bottom: 3px solid $purple-3;
+    }
+
+    & > svg {
+      margin-left: 10px;
+      transform: translate(0, -11px);
+      transition: all 0.15s ease-in-out;
+    }
+
+    &:hover > svg {
+      transform: translate(10px, -11px);
+    }
+  }
+
+  &__shadow {
+    position: absolute;
+    width: 100%;
+    height: 50px;
+    bottom: -50px;
+    left: 0;
+    box-shadow: 0px -10px 50px rgba(0, 0, 0, 0.4);
+  }
+
+  &__continue {
+    position: absolute;
+    z-index: 4;
+    left: 50%;
+    bottom: 10px;
+    width: 32px;
+    height: 32px;
+    transform: translateX(-50%);
+
+    &:focus {
+      & > .hero__continue-inner {
+        box-shadow: inset 0 0 0 1px $teal;
+      }
+      outline: none;
+    }
+
+    &-inner {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      transition: all 0.15s ease-in-out;
+      cursor: pointer;
+
+      & > svg {
+        width: 100%;
+        height: 100%;
+      }
+
+      &:hover {
+        background: rgba(#000, 0.1);
+      }
+
+      &:focus {
+        outline: none;
+      }
+    }
+  }
+
+  @include mq.mq($until: superwide) {
+    & {
+      min-height: 850px;
+    }
+
+    &__container {
+      max-width: 1200px;
+    }
+
+    &__image {
+      width: 900px;
+    }
+
+    &__info {
+      top: calc(51% + (#{$header-height} / 2) + 7px);
+      right: -80px;
+    }
+  }
+
+  @include mq.mq($until: extrawide) {
+    & {
+      min-height: 650px;
+    }
+
+    &__image-container {
+      left: 40px;
+    }
+
+    &__image {
+      width: 700px;
+    }
+
+    &__info {
+      font-size: 1.3rem;
+      right: 40px;
+    }
+  }
+
+  @include mq.mq($until: wide) {
+    & {
+      min-height: 600px;
+    }
+
+    &__image-container {
+      left: 40px;
+    }
+
+    &__image {
+      width: 600px;
+    }
+
+    &__info {
+      font-size: 1.3rem;
+      right: 40px;
+    }
+  }
+
+  @include mq.mq($until: desktop) {
+    & {
+      min-height: auto;
+      height: auto;
+      max-height: none;
+      padding-top: 70px;
+    }
+
+    &__image-container {
+      position: relative;
+      top: auto;
+      left: auto;
+      transform: none;
+      padding: 40px;
+    }
+
+    &__image {
+      position: relative;
+      width: 100%;
+    }
+
+    &__info {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      position: relative;
+      top: auto;
+      left: auto;
+      right: auto;
+      padding: 60px 40px 80px 40px;
+      margin: 0 auto;
+      background: rgba($purple-2, 0.75);
+    }
+  }
+
+  @include mq.mq($until: tablet) {
+    &__image-container {
+      padding: 40px 20px;
+    }
+
+    &__info {
+      padding: 60px 20px 80px 20px;
+    }
+  }
+}

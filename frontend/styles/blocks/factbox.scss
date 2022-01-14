@@ -1,0 +1,62 @@
+@use "imports/variables.scss" as *;
+
+.factbox {
+  position: relative;
+  text-decoration: none;
+
+  &__container {
+    position: relative;
+    width: 100%;
+    padding-top: 80%;
+  }
+
+  &__background,
+  &__image {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    border-radius: 30%;
+    background: $green-2;
+  }
+
+  &__background {
+    transform: translate(-2px, 2px);
+  }
+
+  &__image {
+    transition: all 0.15s ease-in-out;
+    transform: translate(2px, -2px);
+
+    .factbox:hover & {
+      transform: translate(6px, -6px);
+    }
+
+    .factbox:active & {
+      transform: translate(-2px, 2px);
+    }
+
+    & > img {
+      width: 100%;
+      height: 100%;
+      border-radius: 30%;
+      object-fit: cover;
+    }
+  }
+
+  &__name {
+    position: relative;
+    display: block;
+    text-align: center;
+    font-size: 1.25rem;
+    font-weight: $semibold;
+    color: $grey-1;
+    margin-top: 16px;
+    transition: all 0.15s ease-in-out;
+
+    .factbox:hover & {
+      text-decoration: underline;
+    }
+  }
+}

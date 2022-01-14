@@ -30,7 +30,9 @@ const customConfig = {
       patterns: [
         {
           from: path.resolve(__dirname, "frontend/**/*.{png,svg,jpg,jpeg,gif}"),
-          to: "../images/[name].[contenthash][ext]"
+          to({ context, absoluteFilename }) {
+            return `${path.relative(`${context}/frontend/javascript`, path.dirname(absoluteFilename))}/[name].[contenthash][ext]`;
+          },
         },
       ],
     }),
