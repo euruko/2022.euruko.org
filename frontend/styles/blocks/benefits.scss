@@ -32,6 +32,7 @@
   @include mq.mq($until: tablet) {
     &__card {
       flex-basis: 50%;
+      margin: 0;
     }
   }
 
