@@ -73,7 +73,7 @@
     &--organizer {
       .sponsors__link {
         padding: 20px 40px;
-        background: linear-gradient(rgba($blue-1, 0.1), rgba(0, 0, 0, 0.05));
+        background: linear-gradient(rgba(255, 255, 255, 1), rgba(255,255, 255, 0.5));
       }
 
       .sponsors__tag {
@@ -91,7 +91,7 @@
 
     &--emerald {
       .sponsors__link {
-        background: linear-gradient(rgba($green-2, 0.15), rgba(0, 0, 0, 0.05));
+        background: linear-gradient(rgba(255, 255, 255, 1), rgba(255,255, 255, 0.5));
       }
 
       .sponsors__tag {
@@ -106,7 +106,7 @@
     }
     &--platform {
       .sponsors__link {
-        background: linear-gradient(rgba($green-2, 0.15), rgba(0, 0, 0, 0.05));
+        background: linear-gradient(rgba(255, 255, 255, 1), rgba(255,255, 255, 0.5));
       }
 
       .sponsors__tag {
@@ -117,7 +117,7 @@
     &--ruby {
       .sponsors__link {
         padding: 20px 40px;
-        background: linear-gradient(rgba(#e35050, 0.1), rgba(0, 0, 0, 0.05));
+        background: linear-gradient(rgba(255, 255, 255, 1), rgba(255,255, 255, 0.5));
       }
 
       img {
