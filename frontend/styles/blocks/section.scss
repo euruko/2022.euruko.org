@@ -41,6 +41,11 @@
     color: #fff;
   }
 
+  &--darkblue &__container {
+    background: $dark-blue-2;
+    color: #fff;
+  }
+
   &--lightpink &__container {
     background: lighten($pink-light, 28%);
   }

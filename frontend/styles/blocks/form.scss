@@ -139,13 +139,17 @@ form {
   letter-spacing: 0.15em;
 
   background-color: $pink;
+  transition: all 250ms;
 
   cursor: pointer;
 
   transition: box-shadow 150ms cubic-bezier(0.236, 0, 0.236, 1);
 }
 .form-submit:hover {
-  box-shadow: 0 0 24px 0 $pink;
+  box-shadow: 0 0 6px 0 $dark-blue-2;
+  background-color: $dark-blue-3;
+  text-decoration: underline;
+  transition: all 250ms;
 }
 .form-submit:focus {
   outline: none;
@@ -153,8 +157,9 @@ form {
 }
 .form-submit[disabled] {
   background-color: transparent;
-  color: $purple-2;
-  box-shadow: inset 0 0 0 2px rgba($purple-2, 0.4);
+  color: $dark-blue-2;
+  box-shadow: inset 0 0 0 2px rgba($dark-blue-2, 0.4);
+}
 }
 @include mq.mq($until: tablet) {
   .form-title {
