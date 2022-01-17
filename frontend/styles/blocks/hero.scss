@@ -1,10 +1,6 @@
 @use "imports/variables.scss" as *;
 @use "~sass-mq/mq.scss";
 
-@keyframes glow {
-  from {filter: brightness(0.1) saturate(1) contrast(1) drop-shadow(0px 0px 0px $purple-4) drop-shadow(0px 0px 0px $dark-blue-3) drop-shadow(0px 0px 0px $dark-blue-3);}
-  to {filter: brightness(1) saturate(2) contrast(1.25) drop-shadow(0px 0px 6px $purple-4) drop-shadow(0px 0px 8px $dark-blue-3) drop-shadow(0px 0px 20px $dark-blue-3);}
-}
 .hero {
   position: relative;
   width: 100%;
@@ -31,11 +27,7 @@
   &__image {
     width: 900px;
     height: auto;
-    animation: glow infinite backwards alternate 3300ms;
-
-    @media (prefers-reduced-motion: reduce) {
-      animation: none;
-    }
+    filter: brightness(1) saturate(2) contrast(1.25) drop-shadow(0px 0px 6px $purple-4) drop-shadow(0px 0px 8px $dark-blue-3) drop-shadow(0px 0px 20px $dark-blue-3);
   }
 
   &__info {
