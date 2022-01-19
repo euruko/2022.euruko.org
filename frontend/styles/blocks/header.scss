@@ -25,7 +25,7 @@
   @include mq.mq($until: largeTablet) {
     &--mobile-toggled {
       height: 450px;
-      background: #fff;
+      background: $dark-blue-3;
       box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
     }
   }
