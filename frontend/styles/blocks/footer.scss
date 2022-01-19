@@ -5,6 +5,8 @@
   &__container {
     border-top: 1px solid $pink-light;
     padding: 10px 60px;
+    background-color: $dark-blue-2;
+    color: white;
 
     @include mq.mq($until: wide) {
       padding: 10px 40px;

@@ -9,7 +9,7 @@
   top: 0;
   left: 0;
   padding: 0 20px;
-  background: #fff;
+  background: $dark-blue-2;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
   transition: all 0.25s ease-in-out;
 
@@ -18,7 +18,7 @@
   }
 
   &--not-scrolled {
-    background: transparent;
+    background: $dark-blue-1;
     box-shadow: none;
   }
 
@@ -62,7 +62,7 @@
       }
 
       .header--not-scrolled & {
-        background: rgba(255, 255, 255, 0.1);
+        background: $dark-blue-2;
       }
 
       .header--mobile-toggled & {
@@ -105,17 +105,6 @@
       transition: none;
     }
 
-    &--dark {
-      visibility: visible;
-      opacity: 1;
-      pointer-events: auto;
-    }
-    &--light {
-      visibility: hidden;
-      opacity: 0;
-      pointer-events: none;
-    }
-
     .header--not-scrolled & {
       &--dark {
         visibility: hidden;
@@ -154,7 +143,7 @@
     font-size: 1.25rem;
     line-height: 1;
     font-weight: $bold;
-    color: $grey-1;
+    color: #fff;
     transition: all 0.15s ease-in-out;
     @media (prefers-reduced-motion: reduce) {
       transition: none;
@@ -166,7 +155,7 @@
 
     @include mq.mq($until: largeTablet) {
       .header--mobile-toggled & {
-        color: $grey-1;
+        color: #fff;
       }
     }
 
@@ -315,7 +304,7 @@
         font-size: 0.75rem;
         line-height: 0.7;
         font-weight: $bold;
-        color: $grey-1;
+        color: #fff;
         background: #d9d9d9;
         padding: 4px 8px 6px 16px;
         border-radius: 20px;
@@ -348,7 +337,7 @@
         }
 
         .header--mobile-toggled & {
-          color: $grey-1;
+          color: #fff;
           background: #d9d9d9;
         }
 
@@ -369,7 +358,7 @@
       background: #d9d9d9;
       padding: 4px 16px;
       border-radius: 20px;
-      color: $grey-1;
+      color: #fff;
       font-size: 12px;
       font-weight: $bold;
       transition: all 0.15s ease-in-out;
@@ -382,7 +371,7 @@
         display: block;
         text-decoration: none;
         padding: 10px 0;
-        color: $grey-1;
+        color: #fff;
         border-bottom: 1px solid rgba(0, 0, 0, 0.2);
 
         &:last-of-type {
@@ -404,7 +393,7 @@
       }
 
       .header--mobile-toggled & {
-        color: $grey-1;
+        color: #fff;
         background: #d9d9d9;
 
         & > a {
@@ -432,7 +421,7 @@
       position: absolute;
       width: 100%;
       height: 3px;
-      background: $grey-1;
+      background: #fff;
       border-radius: 3px;
       transition: all 0.25s ease-in-out;
       @media (prefers-reduced-motion: reduce) {
@@ -444,7 +433,7 @@
       }
 
       .header--mobile-toggled & {
-        background: $grey-1;
+        background: #fff;
       }
 
       &:nth-child(1) {
