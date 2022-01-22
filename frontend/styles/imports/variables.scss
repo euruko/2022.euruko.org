@@ -53,5 +53,6 @@ $show-breakpoints: (mobile, tablet, largeTablet, desktop, wide, extrawide, super
 
 @use "~sass-mq/mq.scss" with (
   $breakpoints: $breakpoints,
-  $show-breakpoints: $show-breakpoints
+  // Uncomment the line below to see the breakpoints in the browser
+  // $show-breakpoints: $show-breakpoints
 );
