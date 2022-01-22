@@ -10,6 +10,12 @@
   background: $dark-blue-1;
   overflow: hidden;
 
+  // Improve the performance of the image on scroll on Safari
+  backface-visibility: hidden;
+  perspective: 1000;
+  transform: translate3d(0,0,0);
+  transform: translateZ(0);
+
   &__container {
     position: relative;
     max-width: 1300px;
