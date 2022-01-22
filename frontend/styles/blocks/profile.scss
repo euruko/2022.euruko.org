@@ -20,11 +20,11 @@
     left: 0;
     border-radius: 30%;
     background: $orange;
-    filter: drop-shadow(0px 0px 10px $orange);
+    box-shadow: 0px 0px 10px $orange;
 
     .profile--keynote & {
       background: $pink;
-      filter: drop-shadow(0px 0px 10px $pink);
+      box-shadow: 0px 0px 10px $pink;
     }
 
     .profile--mc & {
@@ -42,10 +42,10 @@
 
     a.profile:hover & {
       transform: translate(6px, -6px);
-      filter: drop-shadow(0px 0px 15px $orange);
+      box-shadow: 0px 0px 15px $orange;
     }
-      filter: drop-shadow(0px 0px 15px $pink);
     a.profile--keynote:hover & {
+      box-shadow: 0px 0px 15px $pink;
     }
 
     a.profile:active & {
