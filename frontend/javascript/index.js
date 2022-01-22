@@ -25,7 +25,7 @@ const setScrollListener = () => {
   }
 
   if (heroImage && window.scrollY < 1600) {
-    heroImage.style.cssText = "transform: translateY(" + (window.scrollY * 0.3).toFixed(0) + "px);";
+    heroImage.style.cssText = "transform: translate3d(0, " + (window.scrollY * 0.3).toFixed(0) + "px, 0);";
   }
 
   window.addEventListener("scroll", e => {
@@ -36,7 +36,7 @@ const setScrollListener = () => {
     }
     if (heroImage && window.scrollY < 1600) {
       heroImage.style.cssText =
-        "transform: translateY(" + (window.scrollY * 0.3).toFixed(0) + "px);";
+        "transform: translate3d(0, " + (window.scrollY * 0.3).toFixed(0) + "px, 0);";
     }
   });
 };
