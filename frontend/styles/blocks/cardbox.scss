@@ -30,11 +30,11 @@
     transition: all 0.15s ease-in-out;
     transform: translate(2px, -2px);
 
-    .cardbox:hover & {
+    a.cardbox:hover & {
       transform: translate(6px, -6px);
     }
 
-    .cardbox:active & {
+    a.cardbox:active & {
       transform: translate(-2px, 2px);
     }
 
@@ -57,7 +57,7 @@
     margin-top: 16px;
     transition: all 0.15s ease-in-out;
 
-    .cardbox:hover & {
+    a.cardbox:hover & {
       text-decoration: underline;
     }
   }

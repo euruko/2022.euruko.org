@@ -1,10 +1,5 @@
 <div class="benefits__card">
-  <a
-    href="{{ card.url }}"
-    target="_blank"
-    rel="noopener noreferrer"
-    class="cardbox"
-  >
+  {% capture card_contents %}
     <div class="cardbox__container">
       <div class="cardbox__background"></div>
       <div class="cardbox__image">
@@ -16,6 +11,16 @@
       </div>
     </div>
     <span class="cardbox__name"> {{ card.name }} </span>
-  </a>
+  {% endcapture %}
+  {% if card.url != blank %}
+    <a href="{{ card.url }}" rel="noopener noreferrer" class="cardbox">
+      {{card_contents | raw}}
+    </a>
+  {% else %}
+    <div class="cardbox">
+      {{card_contents | raw}}
+    </div>
+  {% endif %}
+
   <p class="benefits__description">{{ content }}</p>
 </div>

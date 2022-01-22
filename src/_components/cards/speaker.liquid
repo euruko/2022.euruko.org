@@ -1,11 +1,6 @@
 <div class="speakers__profile">
   <!-- TODO: add the bio -->
-  <a
-    href="{{ speaker.url }}"
-    target="_blank"
-    rel="noopener noreferrer"
-    class="profile profile--keynote"
-  >
+  {% capture card_contents %}
     <div class="profile__container">
       <div class="profile__background"></div>
       <div class="profile__image">
@@ -28,5 +23,19 @@
     <span class="profile__name">
       {{ speaker.name }}
     </span>
-  </a>
+  {% endcapture %}
+  {% if speaker.url != blank %}
+    <a
+      href="{{ speaker.url }}"
+      target="_blank"
+      rel="noopener noreferrer"
+      class="profile profile--keynote"
+    >
+      {{ card_contents | raw }}
+    </a>
+  {% else %}
+    <div class="profile profile--{{speaker.category}}">
+      {{ card_contents | raw }}
+    </div>
+  {% endif %}
 </div>

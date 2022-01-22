@@ -40,15 +40,15 @@
     transition: all 0.15s ease-in-out;
     transform: translate(2px, -2px);
 
-    .profile:hover & {
+    a.profile:hover & {
       transform: translate(6px, -6px);
       filter: drop-shadow(0px 0px 15px $orange);
     }
-    .profile--keynote:hover & {
       filter: drop-shadow(0px 0px 15px $pink);
+    a.profile--keynote:hover & {
     }
 
-    .profile:active & {
+    a.profile:active & {
       transform: translate(-2px, 2px);
     }
 
@@ -96,7 +96,7 @@
       transform: translateY(2px);
     }
 
-    .profile:hover & {
+    a.profile:hover & {
       text-decoration: underline;
     }
   }
