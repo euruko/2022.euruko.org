@@ -8,10 +8,10 @@
         Speakers
       </h1>
       <p class="section__info">
-        We are proud to have the following speakers at our conference.
+        Sign up for the newsletter to be the first to know about new speakers and the timing of the CFP.
       </p>
       <div class="speakers__profiles">
-        {% assign categories = "keynote, mc, normal, lightning" | split: ", " %}
+        {% assign categories = "keynote, mc, normal, lightning, cfp" | split: ", " %}
 
         {% for category in categories %}
           {% assign speakers = collections.speakers.resources | where: "data.category", category %}
