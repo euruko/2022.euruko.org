@@ -21,7 +21,7 @@
     flex-direction: column;
     align-items: center;
     margin: 10px 0 10px 20px;
-    background: rgba(0, 0, 0, 0.05);
+    background: #fff;
     padding: 20px 40px;
     border-radius: 50px;
     text-decoration: none;
@@ -71,45 +71,19 @@
       contain-intrinsic-size: 200px 100px;
     }
 
-    &--organizer {
-      .sponsors__link {
-        padding: 20px 40px;
-        background: linear-gradient(rgba(255, 255, 255, 1), rgba(255,255, 255, 0.5));
-      }
-
-      .sponsors__tag {
-        background: $blue-1;
-      }
-
-      img {
-        max-width: 300px;
-      }
-
-      .sponsors__sponsor-description {
-        font-size: 16px;
-      }
-    }
-
-    &--emerald {
-      .sponsors__link {
-        background: linear-gradient(rgba(255, 255, 255, 1), rgba(255,255, 255, 0.5));
-      }
-
+    &--silver {
       .sponsors__tag {
         background: $green-2;
       }
     }
 
-    &--topaz {
+    &--gold {
       .sponsors__tag {
         background: $orange;
       }
     }
-    &--platform {
-      .sponsors__link {
-        background: linear-gradient(rgba(255, 255, 255, 1), rgba(255,255, 255, 0.5));
-      }
 
+    &--platform {
       .sponsors__tag {
         background: $green-2;
       }
@@ -118,7 +92,6 @@
     &--ruby {
       .sponsors__link {
         padding: 20px 40px;
-        background: linear-gradient(rgba(255, 255, 255, 1), rgba(255,255, 255, 0.5));
       }
 
       img {
@@ -130,7 +103,7 @@
       }
     }
 
-    &--small {
+    &--bronze, &--silver {
       .sponsors__link {
         flex-basis: auto;
         justify-content: center;
