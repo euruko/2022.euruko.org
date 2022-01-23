@@ -11,15 +11,16 @@ title: ""
 {% render "home/sponsors", collections: collections %}
 
 {% rendercontent "home/info", title: "Additional info" %}
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cupiditates non Epicuri divisione finiebat, sed sua satietate. Illa videamus, quae a te de amicitia dicta sunt.
+The closest hotel to the venue is the [Scandic Paasi](https://www.scandichotels.com/hotels/finland/helsinki/scandic-paasi) (the buildings are connected) but as the venue is very centrally located it should be easy to reach from a whole variety of hotels in Helsinki.
 
-Quis Aristidem non mortuum diligit? At negat Epicurus-hoc enim vestrum lumen estquemquam, qui honeste non vivat, iucunde posse vivere. Duo Reges: constructio interrete. Quae duo sunt, unum facit.
+The easiest way to get to the venue (if your hotel isn't within walking distance) is probably by public transportation as the venue is reachable by metro, tram, or bus. Check the [HSL](https://www.hsl.fi/en) website for more information about public transportation in Helsinki.
 
-<div>
+<!-- <div>
   <a href="https://example.com" class="section__cta section__cta--teal">
     Example call to action
   </a>
-</div>
+</div> -->
+
 {%- endrendercontent -%}
 
 {% comment %}
