@@ -1624,9 +1624,12 @@ __metadata:
     esbuild: ^0.12.7
     esbuild-loader: ^2.13.1
     file-loader: ^6.2.0
+    lite-youtube-embed: ^0.2.0
     mini-css-extract-plugin: ^1.3.1
     sass: ^1.32.8
     sass-loader: ^8.0.2
+    sass-mq: ^6.0.0
+    smoothscroll-polyfill: ^0.4.4
     webpack: ^5.39.1
     webpack-cli: ^4.7.2
     webpack-manifest-plugin: ^3.1.1
@@ -2390,6 +2393,13 @@ fsevents@~2.3.2:
   version: 1.1.5
   resolution: "limiter@npm:1.1.5"
   checksum: 2d51d3a8bef131aada820b76530f8223380a0079aa0fffdfd3ec47ac2f65763225cb4c62a2f22347f4898c5eeb248edfec991c4a4f5b608dfca0aaa37ac48071
+  languageName: node
+  linkType: hard
+
+"lite-youtube-embed@npm:^0.2.0":
+  version: 0.2.0
+  resolution: "lite-youtube-embed@npm:0.2.0"
+  checksum: 249b67a0c35e54292fd0576f00acf5aabfbce9840cf9f2adf4ceb950a343209e78fe2970c46cc7a06263ca5ba55a8a69e9c88e9469dbbba5945363f4531d1a0e
   languageName: node
   linkType: hard
 
@@ -3337,6 +3347,13 @@ fsevents@~2.3.2:
   languageName: node
   linkType: hard
 
+"sass-mq@npm:^6.0.0":
+  version: 6.0.0
+  resolution: "sass-mq@npm:6.0.0"
+  checksum: 4de55097bec987c6aadafb0f14eb1657b95ab9c23aea76c5f77e595543ba68bd3b9c52f46ca3114e5a350253a085937fe7ddaa6fd3035c249a7c740c7462ac95
+  languageName: node
+  linkType: hard
+
 "sass@npm:^1.32.8":
   version: 1.48.0
   resolution: "sass@npm:1.48.0"
@@ -3529,6 +3546,13 @@ fsevents@~2.3.2:
   version: 4.2.0
   resolution: "smart-buffer@npm:4.2.0"
   checksum: b5167a7142c1da704c0e3af85c402002b597081dd9575031a90b4f229ca5678e9a36e8a374f1814c8156a725d17008ae3bde63b92f9cfd132526379e580bec8b
+  languageName: node
+  linkType: hard
+
+"smoothscroll-polyfill@npm:^0.4.4":
+  version: 0.4.4
+  resolution: "smoothscroll-polyfill@npm:0.4.4"
+  checksum: b99ff7d91689d563ec69cb1d29713b332a24c88ac3dc4ef9ef9fbe4137305336e67253211067c5f786478dbdabd2aa6c2033709d4d8feca327b09eca8d5a0e7b
   languageName: node
   linkType: hard
 

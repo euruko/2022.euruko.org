@@ -32,5 +32,10 @@
   },
   "resolutions": {
     "postcss-focus-within": "^4.0.0"
+  },
+  "dependencies": {
+    "lite-youtube-embed": "^0.2.0",
+    "sass-mq": "^6.0.0",
+    "smoothscroll-polyfill": "^0.4.4"
   }
 }

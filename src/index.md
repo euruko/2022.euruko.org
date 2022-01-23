@@ -3,6 +3,30 @@ layout: home
 title: ""
 ---
 
+{% render "home/hero", site: site, page: page %}
+{% render "home/about" %}
+{% render "home/newsletter" %}
+{% render "home/speakers", collections: collections %}
+{% rendercontent "home/location" %}
+Euruko 2022 will be held at the historic Paasitorni venue. The ruggedly beautiful granite building is in Hakaniemi, right in the centre of Helsinki. It is connected to the Scandic Paasi hotel right next door. The venue is accessible to wheelchair users, but if you have any questions please [get in touch with the venue](https://www.paasitorni.fi/en/contact/) or the Euruko 2022 organisers.
+{%- endrendercontent -%}
+{% render "home/benefits", collections: collections %}
+{% render "home/sponsors", collections: collections %}
+
+{% rendercontent "home/info", title: "Additional info" %}
+The closest hotel to the venue is the [Scandic Paasi](https://www.scandichotels.com/hotels/finland/helsinki/scandic-paasi) (the buildings are connected) but as the venue is very centrally located it should be easy to reach from a whole variety of hotels in Helsinki.
+
+The easiest way to get to the venue (if your hotel isn't within walking distance) is probably by public transportation as the venue is reachable by metro, tram, or bus. Check the [HSL](https://www.hsl.fi/en) website for more information about public transportation in Helsinki.
+
+<!-- <div>
+  <a href="https://example.com" class="section__cta section__cta--teal">
+    Example call to action
+  </a>
+</div> -->
+
+{%- endrendercontent -%}
+
+{% comment %}
 <header>
   <div>
     <img width="1280" height="300" src="{% webpack_path images/euruko-glow.svg %}" alt="Euruko">
@@ -10,41 +34,5 @@ title: ""
   </div>
 </header>
 
-<article>
-  <div class="banner">
-    <p>
-      <strong>
-        Euruko 2022 will be held in online and at
-        <a href="https://www.paasitorni.fi/en/">Paasitorni</a> in Helsinki,
-        Finland.
-      </strong>
-      This year we're taking a hybrid approach to the conference to make it
-      equally good for both in-person and remote participants.
-    </p>
-    <p>Sign up for the Euruko mailing list below to be first to hear any news.</p>
-  </div>
-
-  <section>
-    <form
-      action="https://buttondown.email/api/emails/embed-subscribe/euruko"
-      method="post"
-      target="popupwindow"
-      onsubmit="window.open('https://buttondown.email/euruko', 'popupwindow')"
-      class="embeddable-buttondown-form"
-    >
-      <div>
-        <label for="bd-email" class="form-title">Enter your email address</label>
-      </div>
-      <div class="form-inputs">
-        <input type="email" name="email" id="bd-email" class="form-email" placeholder="Your email address" required />
-        <input type="hidden" value="1" name="embed" />
-        <input type="submit" value="Subscribe" class="form-submit" />
-      </div>
-      <p>
-        <a href="https://buttondown.email" target="_blank" rel="nofollow noopener">Powered by Buttondown.</a>
-      </p>
-    </form>
-  </section>
-</article>
-
 In the meantime, you can watch the talks from Euruko 2021 on [YouTube](https://www.youtube.com/euruko) or follow [@euruko](https://twitter.com/euruko) on Twitter.
+{% endcomment %}

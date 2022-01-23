@@ -1,0 +1,16 @@
+@use "imports/variables.scss" as *;
+@use "~sass-mq/mq.scss";
+
+.schedule {
+  &__table, &__calendar {
+    margin-top: 60px;
+
+    @include mq.mq($until: wide) {
+      margin-top: 40px;
+    }
+  }
+
+  &__calendar {
+    margin-bottom: 1em;
+  }
+}
