@@ -73,7 +73,8 @@
   }
 
   &__background,
-  &__background-darken {
+  &__background-darken,
+  &__background-darken-more {
     position: absolute;
     z-index: -1;
     width: 100%;
@@ -85,6 +86,10 @@
 
   &__background-darken {
     background: rgba($grey-1, 0.5);
+  }
+
+  &__background-darken-more {
+    background: rgba($grey-1, 0.8);
   }
 
   &__heading {
