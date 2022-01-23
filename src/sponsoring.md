@@ -48,7 +48,7 @@ There’s a long tradition to keep Euruko tickets as affordable as possible to o
 
 # Other opportunities available
 
-Do you have a fun idea? Let us know and we'll see what we can work out…
+Do you have a fun idea? Let us know and we'll see what we can work out. For example, you could sponsor the lunch or coffee at the event.
 
 # Contact us
 
