@@ -1,4 +1,8 @@
+import smoothscroll from 'smoothscroll-polyfill';
+
 import "index.scss"
+
+smoothscroll.polyfill();
 
 // Import all javascript files from src/_components
 const componentsContext = require.context("bridgetownComponents", true, /.js$/)
@@ -55,7 +59,6 @@ const setClickListeners = () => {
     if (link.href) {
       const url = new URL(link.href);
       if (url.hostname === window.location.hostname && url.pathname === window.location.pathname && url.hash) {
-        console.log(link.hash)
         link.addEventListener("click", e => {
           e.preventDefault();
           const target = document.getElementById(url.hash.substring(1));
