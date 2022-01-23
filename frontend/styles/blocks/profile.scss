@@ -30,6 +30,11 @@
     .profile--mc & {
       background: $dark-blue-2;
     }
+
+    .profile--cfp & {
+      background: $sessionize;
+      box-shadow: 0px 0px 10px $sessionize;
+    }
   }
 
   &__background {
