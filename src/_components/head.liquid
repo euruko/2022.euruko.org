@@ -26,15 +26,17 @@
 {% if href != page.url %}<link rel="prefetch" href="{{href}}" as="document" />{% endif %}
 {% endfor -%}
 
+{% capture social_image %}{% if page.social_image == blank %}{% webpack_path images/social.png %}{% else %}{{ page.social_image }}{% endif %}{% endcapture %}
+
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:site" content="@euruko" />
 <meta name="twitter:creator" content="@euruko" />
 <meta property="twitter:title" content="{{ page_title }}" />
 <meta property="twitter:description" content="{{ page_description }}" />
-<meta property="twitter:image" content="{{site.url}}{% webpack_path images/social.png %}" />
+<meta property="twitter:image" content="{{site.url}}{{ social_image }}" />
 
 <meta property="og:type" content="website">
 <meta property="og:title" content="{{ page_title }}" />
 <meta property="og:description" content="{{ page_description }}">
-<meta property="og:image" content="{{site.url}}{% webpack_path images/social.png %}">
+<meta property="og:image" content="{{site.url}}{{ social_image }}">
 <meta property="og:url" content="{{page.absolute_url}}">

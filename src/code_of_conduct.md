@@ -3,6 +3,7 @@ layout: page
 title: Code of Conduct
 description: All attendees, speakers, sponsors and volunteers at our conference are required to agree with the following code of conduct. Organisers will enforce this code throughout the event.
 permalink: /code/
+social_image: /images/social-code-of-conduct.png
 ---
 
 All attendees, speakers, sponsors and volunteers at our conference are required to agree with the following code of conduct. Organisers will enforce this code throughout the event. We expect cooperation from all participants to help ensure a safe environment for everybody.
