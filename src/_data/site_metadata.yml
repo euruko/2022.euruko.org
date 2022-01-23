@@ -13,3 +13,5 @@ description: >-
   Euruko 2022 will be held in online and at Paasitorni in Helsinki, Finland. This year we're taking a hybrid approach to the conference to make it equally good for both in-person and remote participants.
 prefetch:
   - "/"
+  - "/code"
+  - "/sponsoring"

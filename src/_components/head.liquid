@@ -1,10 +1,13 @@
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-{% capture page_title %}{{ title | strip_html | strip_newlines }}{% endcapture %}
-<title>{% if page_title != "" %}{{ page_title | escape }} | {{ metadata.title | escape }}{% else %}{{ metadata.title | escape }}{% endif %}</title>
+
+{% capture page_title %}{% if page.title == blank %}{{ metadata.title | strip_html | strip_newlines }}{% else %}{{ page.title | strip_html | strip_newlines }}{% endif %}{% endcapture %}
+<title>{{ page_title | escape }}</title>
 
 <link rel="canonical" href="{{page.absolute_url}}">
-<meta name="description" content="{{ metadata.description }}" />
+
+{% capture page_description %}{% if page.description == blank %}{{ metadata.description }}{% else %}{{ page.description }}{% endif %}{% endcapture %}
+<meta name="description" content="{{ page_description }}" />
 
 <link rel="dns-prefetch" href="https://buttondown.email">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -26,12 +29,12 @@
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:site" content="@euruko" />
 <meta name="twitter:creator" content="@euruko" />
-<meta property="twitter:title" content="{% if page_title != "" %}{{ page_title | escape }}{% else %}{{ metadata.title | escape }}{% endif %}" />
-<meta property="twitter:description" content="{{ metadata.description }}" />
+<meta property="twitter:title" content="{{ page_title }}" />
+<meta property="twitter:description" content="{{ page_description }}" />
 <meta property="twitter:image" content="{{site.url}}{% webpack_path images/social.png %}" />
 
 <meta property="og:type" content="website">
-<meta property="og:title" content="{% if page_title != "" %}{{ page_title | escape }}{% else %}{{ metadata.title | escape }}{% endif %}" />
-<meta property="og:description" content="{{ metadata.description }}">
+<meta property="og:title" content="{{ page_title }}" />
+<meta property="og:description" content="{{ page_description }}">
 <meta property="og:image" content="{{site.url}}{% webpack_path images/social.png %}">
 <meta property="og:url" content="{{page.absolute_url}}">
