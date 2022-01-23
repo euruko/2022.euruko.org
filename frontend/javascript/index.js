@@ -43,34 +43,32 @@ const setScrollListener = () => {
 
 const setClickListeners = () => {
   const mobileToggle = document.getElementById("mobile-toggle");
-  const langSelect = document.getElementById("lang-select");
-  const continueButton = document.getElementById("continue-button");
-  const firstSection = document.querySelector(".section");
   const header = document.getElementById("header");
-  const calendarUrl = document.getElementById("calendarUrl");
-
-  if (mobileToggle && header)
+  if (mobileToggle && header) {
     mobileToggle.addEventListener("click", e => {
       header.classList.toggle("header--mobile-toggled");
     });
-
-  if (langSelect && header)
-    langSelect.addEventListener("click", e => {
-      header.classList.toggle("header--language-toggled");
-    });
-
-  if (continueButton && firstSection)
-    continueButton.addEventListener("click", e => {
-      firstSection.scrollIntoView({
-        behavior: "smooth",
-      });
-    });
-
-  if (calendarUrl) {
-    calendarUrl.addEventListener("click", e => {
-      e.target.select();
-    });
   }
+
+  const links = document.getElementsByTagName("a");
+  for (let link of links) {
+    if (link.href) {
+      const url = new URL(link.href);
+      if (url.hostname === window.location.hostname && url.pathname === window.location.pathname && url.hash) {
+        console.log(link.hash)
+        link.addEventListener("click", e => {
+          e.preventDefault();
+          const target = document.getElementById(url.hash.substring(1));
+          if (target) {
+            target.scrollIntoView({
+              behavior: "smooth",
+              block: "start",
+            });
+          }
+        });
+      }
+    }
+  };
 };
 
 const setIntersectionObserver = () => {
