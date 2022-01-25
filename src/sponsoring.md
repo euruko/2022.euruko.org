@@ -26,7 +26,8 @@ There’s a long tradition to keep Euruko tickets as affordable as possible to o
 
 # Sponsorship packages
 
-|                                          | Bronze                    | Silver                | Gold                   | Ruby                   |
+{% capture sponsorship_table %}
+| Level                                    | Bronze                    | Silver                | Gold                   | Ruby                   |
 |------------------------------------------|---------------------------|-----------------------|------------------------|------------------------|
 | Price                                    | €3,000                    | €5,000                | €8,000                 | €12,000                |
 | Total number available                   | ∞                         | 8                     | 4                      | 2                      |
@@ -42,6 +43,11 @@ There’s a long tradition to keep Euruko tickets as affordable as possible to o
 | Company description on home page         | ❌                         | ❌                     | ✅                      | ✅                      |
 | Twitter promotion (from @euruko)         | ✅                         | ✅                     | ✅                      | ✅                      |
 | Job ads on the conference website        | +€500 (1 job, 200 chars.) | 1 job, 200 characters | 3 jobs, 200 characters | 5 jobs, 600 characters |
+{% endcapture %}
+
+<div class="sponsorship-packages-table">
+{{ sponsorship_table | markdownify }}
+</div>
 
 ¹ The booth area available is subject to availability at the venue. Higher sponsorship levels may get more space. At each level booths are allocated on a first-come, first-served basis by purchase time.<br>
 ² Provided by the sponsor for the in-person attendees. Deadline for the inserts TBD.
