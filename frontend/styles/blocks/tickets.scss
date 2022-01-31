@@ -14,19 +14,19 @@
 
     &--individual {
       .icon {
-        filter: hue-rotate(45deg);
+        filter: hue-rotate(0deg);
       }
     }
 
     &--corporate {
       .icon {
-        filter: hue-rotate(120deg);
+        filter: hue-rotate(180deg);
       }
     }
 
     &--supporter {
       .icon {
-        filter: hue-rotate(180deg);
+        filter: hue-rotate(240deg);
       }
     }
   }

@@ -3,7 +3,7 @@
     {% assign category = ticket_category[0] %}
     {% assign tickets = ticket_category[1] %}
     <div class="tickets__category tickets__category--{{ category }}">
-      <h2><span class="icon">🎫</span> {{ tickets.title }}</h2>
+      <h2><span class="icon" aria-hidden="true">🎟</span> {{ tickets.title }}</h2>
       <p class="tickets__category__description">{{ tickets.description }}</p>
 
       {% for ticket in tickets.list %}
