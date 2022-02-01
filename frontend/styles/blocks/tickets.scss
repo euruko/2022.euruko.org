@@ -1,15 +1,22 @@
 @use "imports/variables.scss" as *;
+@use "~sass-mq/mq.scss";
 
 .tickets {
   &__listing {
     display: flex;
     gap: 1rem;
     flex-wrap: wrap;
+    justify-content: center;
   }
 
   &__category {
     width: calc(33% - 1rem);
     min-width: 350px;
+
+    @include mq.mq($until: largeTablet) {
+      width: 100%;
+      max-width: 400px;
+    }
 
     &__description {
       min-height: 5em;
