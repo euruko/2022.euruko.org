@@ -7,7 +7,7 @@
       <p class="tickets__category__description">{{ tickets.description }}</p>
 
       {% for ticket in tickets.list %}
-        <a href="{{ ticket.url }}" class="tickets__ticket" data-datetime="2022-02-07T17:00:00+0300">
+        <a href="{{ ticket.url }}" class="tickets__ticket" data-datetime="{{ available_at }}">
           <span class="tickets__ticket--name">{{ ticket.name }}</span>
           <span class="tickets__ticket--price">€{{ ticket.price }}</span>
         </a>
