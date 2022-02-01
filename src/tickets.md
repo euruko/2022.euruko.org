@@ -10,6 +10,8 @@ Tickets go on sale on <a href="https://everytimezone.com/s/30825ec9"><time datet
 
 {% render "tickets/listing", site: site %}
 
+We will have free scholarship/diversity tickets available for members of underrepresented groups at a later date. Sign up for the [Euruko newsletter](/#newsletter) to stay informed.
+
 You may be required to wear a mask and/or present proof of vaccination.
 
 Admission is at your own risk. Additional restrictions on entry may be imposed based on the prevailing circumstances. We reserve full rights to make changes to the event at any time. We have the right to refuse admission to the event.
