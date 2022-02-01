@@ -16,6 +16,7 @@ window.addEventListener(
     setClickListeners();
     setScrollListener();
     setIntersectionObserver();
+    linkDateBlocker();
   },
   false
 );
@@ -49,7 +50,7 @@ const setClickListeners = () => {
   const mobileToggle = document.getElementById("mobile-toggle");
   const header = document.getElementById("header");
   if (mobileToggle && header) {
-    mobileToggle.addEventListener("click", e => {
+    mobileToggle.addEventListener("click", () => {
       header.classList.toggle("header--mobile-toggled");
     });
   }
@@ -96,3 +97,29 @@ const observerCallback = entries => {
     }
   });
 };
+
+const linkDateBlocker = () => {
+  const links = document.querySelectorAll("a[data-datetime]");
+  for (let link of links) {
+      const date = new Date(link.dataset.datetime);
+      if (date && !isNaN(date) && date >= Date.now()) {
+        link.addEventListener("click", e => {
+          e.preventDefault();
+          if (date <= Date.now()) {
+            window.location.href = link.href
+          } else {
+            if (!link.dataset.blocked) {
+              const span = link.querySelector("span")
+              const originalText = span.innerText
+              span.innerText = "Not available yet"
+              setTimeout(() => {
+                link.dataset.blocked = false
+                span.innerText = originalText
+              }, 5000)
+              link.dataset.blocked = true
+            }
+          }
+        })
+      }
+  }
+}
