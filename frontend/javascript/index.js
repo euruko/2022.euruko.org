@@ -63,6 +63,7 @@ const setClickListeners = () => {
           e.preventDefault();
           const target = document.getElementById(url.hash.substring(1));
           if (target) {
+            header.classList.remove("header--mobile-toggled");
             target.scrollIntoView({
               behavior: "smooth",
               block: "start",
