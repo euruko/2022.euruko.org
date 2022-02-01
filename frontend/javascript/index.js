@@ -1,4 +1,5 @@
 import smoothscroll from 'smoothscroll-polyfill';
+import formatDistanceToNow from 'date-fns/formatDistanceToNow';
 
 import "index.scss"
 
@@ -105,18 +106,21 @@ const linkDateBlocker = () => {
       if (date && !isNaN(date) && date >= Date.now()) {
         link.addEventListener("click", e => {
           e.preventDefault();
-          if (date <= Date.now()) {
+          const now = Date.now()
+          if (date <= now) {
             window.location.href = link.href
           } else {
+            console.log(link.dataset)
             if (!link.dataset.blocked) {
+              link.dataset.blocked = true
               const span = link.querySelector("span")
               const originalText = span.innerText
-              span.innerText = "Not available yet"
+              const distance = formatDistanceToNow(date, { addSuffix: true })
+              span.innerText = `Available ${distance}`
               setTimeout(() => {
-                link.dataset.blocked = false
+                delete link.dataset.blocked
                 span.innerText = originalText
               }, 5000)
-              link.dataset.blocked = true
             }
           }
         })
