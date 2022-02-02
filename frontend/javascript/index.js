@@ -1,4 +1,5 @@
 import smoothscroll from 'smoothscroll-polyfill';
+import formatDistanceToNow from 'date-fns/formatDistanceToNow';
 
 import "index.scss"
 
@@ -16,6 +17,7 @@ window.addEventListener(
     setClickListeners();
     setScrollListener();
     setIntersectionObserver();
+    linkDateBlocker();
   },
   false
 );
@@ -49,7 +51,7 @@ const setClickListeners = () => {
   const mobileToggle = document.getElementById("mobile-toggle");
   const header = document.getElementById("header");
   if (mobileToggle && header) {
-    mobileToggle.addEventListener("click", e => {
+    mobileToggle.addEventListener("click", () => {
       header.classList.toggle("header--mobile-toggled");
     });
   }
@@ -96,3 +98,32 @@ const observerCallback = entries => {
     }
   });
 };
+
+const linkDateBlocker = () => {
+  const links = document.querySelectorAll("a[data-datetime]");
+  for (let link of links) {
+      const date = new Date(link.dataset.datetime);
+      if (date && !isNaN(date) && date >= Date.now()) {
+        link.addEventListener("click", e => {
+          e.preventDefault();
+          const now = Date.now()
+          if (date <= now) {
+            window.location.href = link.href
+          } else {
+            console.log(link.dataset)
+            if (!link.dataset.blocked) {
+              link.dataset.blocked = true
+              const span = link.querySelector("span")
+              const originalText = span.innerText
+              const distance = formatDistanceToNow(date, { addSuffix: true })
+              span.innerText = `Available ${distance}`
+              setTimeout(() => {
+                delete link.dataset.blocked
+                span.innerText = originalText
+              }, 5000)
+            }
+          }
+        })
+      }
+  }
+}
