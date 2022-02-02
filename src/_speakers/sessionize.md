@@ -2,6 +2,7 @@
 title: "Sessionize"
 name: You?
 category: cfp
+url: /cfp
 published: true
 ---
 
