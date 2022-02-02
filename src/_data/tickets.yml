@@ -3,25 +3,25 @@ individual:
   description: "If you're paying for your own ticket this is for you."
   list:
     - name: Virtual ticket
-      price: 9
+      price: 60
       url: https://ti.to/helsinki-ruby/euruko/with/g37koq5mrlm
     - name: In-person ticket
-      price: 99
+      price: 120
       url: https://ti.to/helsinki-ruby/euruko/with/in-person
 corporate:
   title: "Corporate"
   description: "If your ticket is being paid for by your business or organisation please use this ticket."
   list:
     - name: Virtual ticket
-      price: 99
+      price: 90
       url: https://ti.to/helsinki-ruby/euruko/with/corporate-virtual-ticket
     - name: In-person ticket
-      price: 999
+      price: 180
       url: https://ti.to/helsinki-ruby/euruko/with/corporate-in-person-ticket
 supporter:
   title: "Supporter"
   description: "Show some extra love for Euruko and include your name in a list of supporters on this site."
   list:
     - name: Supporter ticket
-      price: 999
+      price: 240
       url: https://ti.to/helsinki-ruby/euruko/with/oasablg7hfm
