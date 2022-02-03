@@ -146,7 +146,8 @@ const discountCodeApplicator = () => {
     discountDiv.classList.add("tickets__listing__discount")
     discountDiv.innerHTML = `👍 Discount code ${codeSpan.outerHTML} will be applied at checkout to eligible tickets.`
 
-    listing.insertAdjacentElement("afterend", discountDiv)
+    listing.parentNode.insertBefore(discountDiv, listing);
+    // listing.insertAdjacentElement("afterend", discountDiv.cloneNode(true))
 
     const links = listing.querySelectorAll("a[href]")
 
