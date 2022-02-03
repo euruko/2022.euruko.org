@@ -18,6 +18,7 @@ window.addEventListener(
     setScrollListener();
     setIntersectionObserver();
     linkDateBlocker();
+    discountCodeApplicator();
   },
   false
 );
@@ -125,5 +126,37 @@ const linkDateBlocker = () => {
           }
         })
       }
+  }
+}
+
+const discountCodeApplicator = () => {
+  const listing = document.querySelector("[data-ticket-listing]")
+  const params = new Proxy(new URLSearchParams(window.location.search), {
+    get: (searchParams, prop) => searchParams.get(prop),
+  });
+
+  if (listing && params.code) {
+    let code = params.code;
+    console.table({code})
+    const codeSpan = document.createElement("span")
+    codeSpan.classList.add("tickets__listing__discount--code")
+    codeSpan.innerText = code
+
+    const discountDiv = document.createElement("div")
+    discountDiv.classList.add("tickets__listing__discount")
+    discountDiv.innerHTML = `👍 Discount code ${codeSpan.outerHTML}<br> will be applied at checkout to eligible tickets.`
+
+    listing.insertAdjacentElement("afterend", discountDiv)
+
+    const links = listing.querySelectorAll("a[href]")
+
+    for (let link of links) {
+      const url = new URL(link.href);
+      if (url.hostname === "ti.to") {
+        const path = url.pathname.split("/")
+        url.pathname = path.concat(["discount", code]).join("/")
+        link.href = url.toString()
+      }
+    }
   }
 }

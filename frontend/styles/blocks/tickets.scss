@@ -7,6 +7,19 @@
     gap: 1rem;
     flex-wrap: wrap;
     justify-content: center;
+
+    &__discount {
+      text-align: center;
+      font-style: italic;
+
+      &--code {
+        font-family: $monospace;
+        font-style: normal;
+        color: $pink-light;
+        font-weight: $bold;
+        white-space: nowrap;
+      }
+    }
   }
 
   &__category {
