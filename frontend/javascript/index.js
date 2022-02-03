@@ -144,7 +144,7 @@ const discountCodeApplicator = () => {
 
     const discountDiv = document.createElement("div")
     discountDiv.classList.add("tickets__listing__discount")
-    discountDiv.innerHTML = `👍 Discount code ${codeSpan.outerHTML}<br> will be applied at checkout to eligible tickets.`
+    discountDiv.innerHTML = `👍 Discount code ${codeSpan.outerHTML} will be applied at checkout to eligible tickets.`
 
     listing.insertAdjacentElement("afterend", discountDiv)
 
