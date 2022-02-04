@@ -103,7 +103,8 @@
       }
     }
 
-    &--bronze, &--silver {
+    &--bronze,
+    &--silver {
       .sponsors__link {
         flex-basis: auto;
         justify-content: center;

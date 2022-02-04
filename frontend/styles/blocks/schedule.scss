@@ -2,7 +2,8 @@
 @use "~sass-mq/mq.scss";
 
 .schedule {
-  &__table, &__calendar {
+  &__table,
+  &__calendar {
     margin-top: 60px;
 
     @include mq.mq($until: wide) {

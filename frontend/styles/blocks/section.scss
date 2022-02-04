@@ -196,12 +196,14 @@
       flex-wrap: wrap;
     }
 
-    &__small-column, &__very-small-column {
+    &__small-column,
+    &__very-small-column {
       flex-basis: 100%;
       padding-right: 0;
     }
 
-    &__large-column, &__very-large-column {
+    &__large-column,
+    &__very-large-column {
       flex-basis: 100%;
       margin-top: 0;
     }

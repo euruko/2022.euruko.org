@@ -1,5 +1,5 @@
 ---
-title:  "Matz"
+title: "Matz"
 name: Yukihiro Matsumoto
 category: keynote
 url: https://twitter.com/yukihiro_matz

@@ -8,7 +8,7 @@ $purple-4: lighten($purple-1, 65%);
 
 $dark-blue-1: #000024;
 $dark-blue-2: #181832;
-$dark-blue-3: #2D2D45;
+$dark-blue-3: #2d2d45;
 $dark-blue-4: lighten($dark-blue-1, 65%);
 
 $blue-1: #4b9bbe;
@@ -50,7 +50,7 @@ $breakpoints: (
   desktop: 992px,
   wide: 1300px,
   extrawide: 1450px,
-  superwide: 1600px
+  superwide: 1600px,
 );
 
 $show-breakpoints: (mobile, tablet, largeTablet, desktop, wide, extrawide, superwide);

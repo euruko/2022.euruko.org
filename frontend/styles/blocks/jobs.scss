@@ -28,8 +28,8 @@
     margin: 10px;
     padding: 40px;
     padding-bottom: 30px;
-    background: #F7F8FB;
-    border: 1px solid #E5EAF1;
+    background: #f7f8fb;
+    border: 1px solid #e5eaf1;
 
     @include mq.mq($until: largeTablet) {
       flex-basis: calc(100% - 20px);

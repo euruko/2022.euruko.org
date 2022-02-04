@@ -1,8 +1,8 @@
 const path = require("path");
-const { merge } = require('webpack-merge')
+const { merge } = require("webpack-merge");
 const CopyPlugin = require("copy-webpack-plugin");
 
-let config = require("./config/webpack.defaults.js")
+let config = require("./config/webpack.defaults.js");
 
 // Add any overrides to the default webpack config here:
 //
@@ -31,7 +31,10 @@ const customConfig = {
         {
           from: path.resolve(__dirname, "frontend/**/*.{png,svg,jpg,jpeg,gif}"),
           to({ context, absoluteFilename }) {
-            return `${path.relative(`${context}/frontend/javascript`, path.dirname(absoluteFilename))}/[name].[contenthash][ext]`;
+            return `${path.relative(
+              `${context}/frontend/javascript`,
+              path.dirname(absoluteFilename)
+            )}/[name].[contenthash][ext]`;
           },
         },
       ],
@@ -39,8 +42,8 @@ const customConfig = {
   ],
 };
 
-config = merge(config, customConfig)
+config = merge(config, customConfig);
 
 ////////////////////////////////////////////////////////
 
-module.exports = config
+module.exports = config;
