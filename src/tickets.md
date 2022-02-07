@@ -6,9 +6,7 @@ date: 2022-01-31T17:00:00Z
 social_image: /images/social-tickets.png
 ---
 
-Tickets go on sale on <a href="https://everytimezone.com/s/30825ec9"><time datetime="2022-02-07T17:00:00+0200">07.02.2022 at 17:00</time></a> (Helsinki time).
-
-{% render "tickets/listing", site: site, available_at: "2022-02-07T17:00:00+0200" %}
+{% render "tickets/listing", site: site %}
 
 We will have free scholarship/diversity tickets available for members of underrepresented groups at a later date. Sign up for the [Euruko newsletter](/#newsletter) to stay informed.
 
