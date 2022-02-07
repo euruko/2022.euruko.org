@@ -18,7 +18,7 @@ There’s a long tradition to keep Euruko tickets as affordable as possible to o
 
 # Facts about Euruko
 
-* 500–700 in-person participants expected from Europe and elsewhere
+* 500–700 in-person participants expected from Europe and elsewhere (plus virtual attendees from all over the world)
 * A two day, single track conference
 * Well established in the community; it has been held since 2003 in Amsterdam, Athens, Barcelona, Berlin, Budapest, Karlsruhe, Krakow, Munich, Prague, Rotterdam, Salzburg, Sofia, and Vienna
 * Some of the very best speakers from the Ruby community
