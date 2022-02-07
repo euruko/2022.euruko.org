@@ -7,5 +7,8 @@
     {% render "navbar", site: site, page: page %}
     {{ content }}
     {% render "footer", metadata: site.metadata %}
+    {% if bridgetown.environment == "production" %}
+      <!-- Cloudflare Web Analytics --><script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "72eb734d9e0b4751a41648994b493fa9"}'></script><!-- End Cloudflare Web Analytics -->
+    {% endif %}
   </body>
 </html>
