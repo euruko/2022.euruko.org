@@ -2,7 +2,7 @@
 layout: page
 title: "Euruko 2022 tickets"
 description: Get your in-person or virtual ticket to Euruko 2022!
-date: 2022-02-08T12:00:00Z
+date: 2022-02-08T09:00:00Z
 social_image: /images/social-tickets.png
 ---
 
