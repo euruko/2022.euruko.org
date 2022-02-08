@@ -4,7 +4,7 @@ on: push
 
 jobs:
   test:
-    name: Test (and optionally deploy)
+    name: Build and test
     runs-on: ubuntu-latest
     env:
       BUNDLE_WITH: test
@@ -27,8 +27,12 @@ jobs:
           ruby-version: 2.7
           bundler-cache: true
 
-      - name: Build and test
-        run: yarn deploy:test
+      - name: Build
+        run: yarn deploy
+
+      - name: Test
+        run: yarn test
+        if: success()
 
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@4.1.4
