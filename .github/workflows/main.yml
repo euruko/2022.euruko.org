@@ -27,11 +27,15 @@ jobs:
           ruby-version: 2.7
           bundler-cache: true
 
-      - name: Build
-        run: yarn deploy
+      - name: Build webpack assets
+        run: yarn webpack-build
 
       - name: Test
         run: yarn test
+        if: success()
+
+      - name: Build
+        run: yarn deploy
         if: success()
 
       - name: Deploy 🚀

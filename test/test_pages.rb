@@ -1,6 +1,16 @@
 require_relative "./helper"
 
 class TestPages < Minitest::Test
+  context "missing webpack manifest" do
+    setup do
+      @page = find_resource_by_url("/")
+    end
+
+    should "not contain a missing manifest" do
+      refute_includes @page.to_s, "MISSING_WEBPACK_MANIFEST_FILE"
+    end
+  end
+
   context "homepage" do
     setup do
       document_root find_resource_by_url("/")
