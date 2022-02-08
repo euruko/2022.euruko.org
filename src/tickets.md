@@ -1,8 +1,8 @@
 ---
 layout: page
 title: "Euruko 2022 tickets"
-description: You can buy a ticket for Euruko 2022 starting on 07.02.2022 at 17:00 (Helsinki time)
-date: 2022-01-31T17:00:00Z
+description: Get your in-person or virtual ticket to Euruko 2022!
+date: 2022-02-08T12:00:00Z
 social_image: /images/social-tickets.png
 ---
 
