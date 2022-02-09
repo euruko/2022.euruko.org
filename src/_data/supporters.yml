@@ -1,0 +1,12 @@
+- name: John D.
+  purchased_at: 2022-02-08T09:00:00Z
+- name: Jane
+  purchased_at: 2022-02-04T09:00:00Z
+- name: Fake Name
+  purchased_at: 2022-02-06T09:00:00Z
+- name: Bob A.
+  purchased_at: 2022-02-08T09:00:00Z
+- name: Billy
+  purchased_at: 2022-02-04T09:00:00Z
+- name: Simo
+  purchased_at: 2022-02-06T09:00:00Z
