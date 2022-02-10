@@ -50,9 +50,16 @@ const setScrollListener = () => {
 const setClickListeners = () => {
   const mobileToggle = document.getElementById("mobile-toggle");
   const header = document.getElementById("header");
+  const continueButton = document.querySelector("[data-continue-button]");
   if (mobileToggle && header) {
     mobileToggle.addEventListener("click", () => {
       header.classList.toggle("header--mobile-toggled");
+    });
+  }
+
+  if (continueButton) {
+    continueButton.addEventListener("click", (e) => {
+      continueButton.scrollIntoView({ behavior: "smooth", block: "end" });
     });
   }
 
