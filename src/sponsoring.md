@@ -31,7 +31,7 @@ There’s a long tradition to keep Euruko tickets as affordable as possible to o
 |------------------------------------------|---------------------------|------------------------|------------------------|------------------------|
 | Price                                    | €3,000                    | €5,000                 | €8,000                 | €12,000                |
 | Total number available                   | ∞                         | 8                      | 4                      | 2                      |
-| Included streaming passes                | 5                         | 10                     | 15                     | 20                     |
+| Included virtual passes                  | 5                         | 10                     | 15                     | 20                     |
 | Included in-person passes                | 1                         | 2                      | 4                      | 6                      |
 | 20% discount on additional passes¹       | ✅                         | ✅                     | ✅                     | ✅                      |
 | In-person conference booth²              | ❌                         | ✅ (size TBD)          | ✅ (size TBD)          | ✅ (size TBD)           |
