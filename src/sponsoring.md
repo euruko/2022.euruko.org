@@ -33,7 +33,7 @@ There’s a long tradition to keep Euruko tickets as affordable as possible to o
 | Total number available                   | ∞                         | 8                      | 4                      | 2                      |
 | Included streaming passes                | 5                         | 10                     | 15                     | 20                     |
 | Included in-person passes                | 1                         | 2                      | 4                      | 6                      |
-| 20% discount on additional passes¹        | 20%                       | 20%                    | 20%                    |20%                     |
+| 20% discount on additional passes¹       | ✅                         | ✅                     | ✅                     | ✅                      |
 | In-person conference booth²              | ❌                         | ✅ (size TBD)          | ✅ (size TBD)          | ✅ (size TBD)           |
 | Virtual conference booth                 | ✅                         | ✅                     | ✅                     | ✅                      |
 | Dedicated Discord Channel                | ❌                         | ❌                     | ✅                     | ✅                      |
