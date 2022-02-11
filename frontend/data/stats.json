@@ -1,0 +1,198 @@
+[
+  {
+    "country_code": "DE",
+    "name": "Germany",
+    "longitude": 10.451526,
+    "latitude": 51.165691,
+    "percentage": 22
+  },
+  {
+    "country_code": "PL",
+    "name": "Poland",
+    "longitude": 19.145136,
+    "latitude": 51.919438,
+    "percentage": 14
+  },
+  {
+    "country_code": "CH",
+    "name": "Switzerland",
+    "longitude": 8.227511999999999,
+    "latitude": 46.818188,
+    "percentage": 8
+  },
+  {
+    "country_code": "UA",
+    "name": "Ukraine",
+    "longitude": 31.1655799,
+    "latitude": 48.379433,
+    "percentage": 7
+  },
+  {
+    "country_code": "ES",
+    "name": "Spain",
+    "longitude": -3.74922,
+    "latitude": 40.46366700000001,
+    "percentage": 7
+  },
+  {
+    "country_code": "NL",
+    "name": "Netherlands",
+    "longitude": 5.291265999999999,
+    "latitude": 52.132633,
+    "percentage": 7
+  },
+  {
+    "country_code": "SE",
+    "name": "Sweden",
+    "longitude": 18.643501,
+    "latitude": 60.12816100000001,
+    "percentage": 6
+  },
+  {
+    "country_code": "FI",
+    "name": "Finland",
+    "longitude": 25.7481511,
+    "latitude": 61.92410999999999,
+    "percentage": 5
+  },
+  {
+    "country_code": "SK",
+    "name": "Slovakia",
+    "longitude": 19.699024,
+    "latitude": 48.669026,
+    "percentage": 3
+  },
+  {
+    "country_code": "BY",
+    "name": "Belarus",
+    "longitude": 27.953389,
+    "latitude": 53.709807,
+    "percentage": 3
+  },
+  {
+    "country_code": "CZ",
+    "name": "Czechia",
+    "longitude": 15.472962,
+    "latitude": 49.81749199999999,
+    "percentage": 2
+  },
+  {
+    "country_code": "US",
+    "name": "United States",
+    "longitude": -95.712891,
+    "latitude": 37.09024,
+    "percentage": 2
+  },
+  {
+    "country_code": "GB",
+    "name": "United Kingdom",
+    "longitude": -3.435973,
+    "latitude": 55.378051,
+    "percentage": 2
+  },
+  {
+    "country_code": "AU",
+    "name": "Australia",
+    "longitude": 133.775136,
+    "latitude": -25.274398,
+    "percentage": 2
+  },
+  {
+    "country_code": "SI",
+    "name": "Slovenia",
+    "longitude": 14.995463,
+    "latitude": 46.151241,
+    "percentage": 1
+  },
+  {
+    "country_code": "CA",
+    "name": "Canada",
+    "longitude": -106.346771,
+    "latitude": 56.130366,
+    "percentage": 1
+  },
+  {
+    "country_code": "RO",
+    "name": "Romania",
+    "longitude": 24.96676,
+    "latitude": 45.943161,
+    "percentage": 1
+  },
+  {
+    "country_code": "AT",
+    "name": "Austria",
+    "longitude": 14.550072,
+    "latitude": 47.516231,
+    "percentage": 1
+  },
+  {
+    "country_code": "PT",
+    "name": "Portugal",
+    "longitude": -8.224454,
+    "latitude": 39.39987199999999,
+    "percentage": 1
+  },
+  {
+    "country_code": "LT",
+    "name": "Lithuania",
+    "longitude": 23.881275,
+    "latitude": 55.169438,
+    "percentage": 1
+  },
+  {
+    "country_code": "EE",
+    "name": "Estonia",
+    "longitude": 25.0136071,
+    "latitude": 58.595272,
+    "percentage": 1
+  },
+  {
+    "country_code": "BR",
+    "name": "Brazil",
+    "longitude": -51.92528,
+    "latitude": -14.235004,
+    "percentage": 1
+  },
+  {
+    "country_code": "JP",
+    "name": "Japan",
+    "longitude": 138.252924,
+    "latitude": 36.204824,
+    "percentage": 1
+  },
+  {
+    "country_code": "RU",
+    "name": "Russian Federation",
+    "longitude": 105.318756,
+    "latitude": 61.52401,
+    "percentage": 1
+  },
+  {
+    "country_code": "BG",
+    "name": "Bulgaria",
+    "longitude": 25.48583,
+    "latitude": 42.733883,
+    "percentage": 1
+  },
+  {
+    "country_code": "DK",
+    "name": "Denmark",
+    "longitude": 9.501785,
+    "latitude": 56.26392,
+    "percentage": 1
+  },
+  {
+    "country_code": "NO",
+    "name": "Norway",
+    "longitude": 8.468945999999999,
+    "latitude": 60.47202399999999,
+    "percentage": 1
+  },
+  {
+    "country_code": "FR",
+    "name": "France",
+    "longitude": 2.213749,
+    "latitude": 46.227638,
+    "percentage": 1
+  }
+]

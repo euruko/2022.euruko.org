@@ -47,6 +47,11 @@ GEM
     builder (3.2.4)
     colorator (1.1.0)
     concurrent-ruby (1.1.9)
+    countries (4.2.1)
+      i18n_data (~> 0.15.0)
+      sixarm_ruby_unaccent (~> 1.1)
+    domain_name (0.5.20190701)
+      unf (>= 0.0.5, < 1.0.0)
     erubi (1.10.0)
     faraday (1.8.0)
       faraday-em_http (~> 1.0)
@@ -70,10 +75,23 @@ GEM
     faraday_middleware (1.2.0)
       faraday (~> 1.0)
     ffi (1.15.4)
+    ffi-compiler (1.0.1)
+      ffi (>= 1.0.0)
+      rake
     hash_with_dot_access (1.1.0)
       activesupport (>= 5.0.0, < 7.0)
+    http (5.0.4)
+      addressable (~> 2.8)
+      http-cookie (~> 1.0)
+      http-form_data (~> 2.2)
+      llhttp-ffi (~> 0.4.0)
+    http-cookie (1.0.4)
+      domain_name (~> 0.5)
+    http-form_data (2.3.0)
     i18n (1.8.10)
       concurrent-ruby (~> 1.0)
+    i18n_data (0.15.0)
+      simple_po_parser (~> 1.1)
     kramdown (2.3.1)
       rexml
     kramdown-parser-gfm (1.1.0)
@@ -85,6 +103,9 @@ GEM
     listen (3.7.0)
       rb-fsevent (~> 0.10, >= 0.10.3)
       rb-inotify (~> 0.9, >= 0.9.10)
+    llhttp-ffi (0.4.0)
+      ffi-compiler (~> 1.0)
+      rake (~> 13.0)
     minitest (5.14.4)
     minitest-profile (0.0.2)
     minitest-reporters (1.4.3)
@@ -93,15 +114,16 @@ GEM
       minitest (>= 5.0)
       ruby-progressbar
     multipart-post (2.1.1)
-    nokogiri (1.12.5-x86_64-darwin)
-      racc (~> 1.4)
     nokogiri (1.12.5-x86_64-linux)
       racc (~> 1.4)
+    pastel (0.8.0)
+      tty-color (~> 0.5)
     public_suffix (4.0.6)
     racc (1.6.0)
     rails-dom-testing (2.0.3)
       activesupport (>= 4.2.0)
       nokogiri (>= 1.6)
+    rake (13.0.6)
     rb-fsevent (0.11.0)
     rb-inotify (0.10.1)
       ffi (~> 1.0)
@@ -116,12 +138,20 @@ GEM
     shoulda-context (2.0.0)
     shoulda-matchers (4.5.1)
       activesupport (>= 4.2.0)
+    simple_po_parser (1.1.5)
+    sixarm_ruby_unaccent (1.2.0)
     terminal-table (1.8.0)
       unicode-display_width (~> 1.1, >= 1.1.1)
     thor (1.1.0)
     tilt (2.0.10)
+    tty-color (0.6.0)
+    tty-logger (0.6.0)
+      pastel (~> 0.8)
     tzinfo (2.0.4)
       concurrent-ruby (~> 1.0)
+    unf (0.1.4)
+      unf_ext
+    unf_ext (0.0.8)
     unicode-display_width (1.8.0)
     webrick (1.7.0)
     zeitwerk (2.5.1)
@@ -134,12 +164,15 @@ PLATFORMS
 DEPENDENCIES
   bridgetown (~> 0.21.5)
   bridgetown-sitemap (~> 1.1)
+  countries (~> 4.2.1)
+  http (~> 5.0.4)
   minitest
   minitest-profile
   minitest-reporters
   nokogiri
   rails-dom-testing
   shoulda
+  tty-logger
 
 BUNDLED WITH
    2.3.5
