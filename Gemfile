@@ -18,6 +18,10 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 gem "bridgetown", "~> 0.21.5"
 
+gem "http", "~> 5.0.4"
+gem "countries", "~> 4.2.1"
+gem "tty-logger"
+
 group :test, optional: true do
   gem "nokogiri"
   gem "minitest"
