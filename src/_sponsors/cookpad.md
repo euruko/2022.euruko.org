@@ -2,6 +2,7 @@
 name: Cookpad
 level: ruby
 url: https://apply.workable.com/cookpad/
+show_description: true
 published: true
 ---
 

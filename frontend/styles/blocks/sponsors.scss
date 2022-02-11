@@ -46,7 +46,7 @@
   &__tag {
     position: absolute;
     top: -10px;
-    background: #e35050;
+    background: $grey-3;
     color: #fff;
     font-size: 12px;
     letter-spacing: 0.2em;
@@ -71,15 +71,21 @@
       contain-intrinsic-size: 200px 100px;
     }
 
+    &--bronze {
+      .sponsors__tag {
+        background: $bronze;
+      }
+    }
+
     &--silver {
       .sponsors__tag {
-        background: $green-2;
+        background: $silver;
       }
     }
 
     &--gold {
       .sponsors__tag {
-        background: $orange;
+        background: $gold;
       }
     }
 
@@ -90,6 +96,10 @@
     }
 
     &--ruby {
+      .sponsors__tag {
+        background: $ruby;
+      }
+
       .sponsors__link {
         padding: 20px 40px;
       }

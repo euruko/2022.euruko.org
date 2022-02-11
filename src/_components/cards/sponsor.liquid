@@ -1,6 +1,8 @@
 <div class="sponsors__card">
   {% capture default_tag %}{{sponsor.level | upcase}}{% endcapture %}
   <a
+    alt="{{ sponsor.name }}"
+    title="{{ sponsor.name }}"
     class="sponsors__link"
     href="{{ sponsor.url }}"
     target="_blank"
@@ -12,7 +14,7 @@
       alt="{{ sponsor.name }}"
       loading="lazy"
     />
-    {% if content != blank %}
+    {% if sponsor.show_description && content != blank %}
       <div class="sponsors__sponsor-description">
         {{ content }}
       </div>
