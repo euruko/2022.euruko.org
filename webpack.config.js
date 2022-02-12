@@ -29,7 +29,7 @@ const customConfig = {
     new CopyPlugin({
       patterns: [
         {
-          from: path.resolve(__dirname, "frontend/**/*.{png,svg,jpg,jpeg,gif}"),
+          from: path.resolve(__dirname, "frontend/**/*.{png,svg,jpg,jpeg,gif,json,geojson}"),
           to({ context, absoluteFilename }) {
             return `${path.relative(
               `${context}/frontend/javascript`,
