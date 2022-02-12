@@ -1,6 +1,8 @@
 import smoothscroll from "smoothscroll-polyfill";
 import formatDistanceToNow from "date-fns/formatDistanceToNow";
 
+import "map.js";
+
 import "index.scss";
 
 smoothscroll.polyfill();
