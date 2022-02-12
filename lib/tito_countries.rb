@@ -67,6 +67,9 @@ class TitoCountries
         name: country.common_name,
         longitude: country.longitude,
         latitude: country.latitude,
+        world_region: country.world_region,
+        region: country.region,
+        subregion: country.subregion,
         percentage: percentage
       })
 
