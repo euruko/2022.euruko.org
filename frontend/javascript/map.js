@@ -1,7 +1,15 @@
 __webpack_public_path__ = "/_bridgetown/static/js/";
 
 async function initializeMap(svgElement) {
-  const d3 = await import("d3");
+  const d3 = await Promise.all([
+    import("d3-array"),
+    import("d3-color"),
+    import("d3-fetch"),
+    import("d3-geo"),
+    import("d3-interpolate"),
+    import("d3-scale"),
+    import("d3-selection"),
+  ]).then((d3) => Object.assign({}, ...d3));
 
   const worldUrl = svgElement.dataset.world;
   const statsUrl = svgElement.dataset.stats;
@@ -9,8 +17,6 @@ async function initializeMap(svgElement) {
   const svg = d3.select(svgElement),
     width = +svgElement.viewBox.baseVal.width,
     height = +svgElement.viewBox.baseVal.height;
-
-  console.log({ svg, width, height, ...svgElement.dataset });
 
   // Map and projection
   const projection = d3
@@ -68,7 +74,6 @@ async function initializeMap(svgElement) {
       .attr("d", d3.geoPath().projection(projection))
       .attr("fill", (d) => {
         const stats = data.find((c) => c.alpha3 == d.id);
-        console.log({ stats, ...d });
         d.percentage = stats?.percentage || 0;
         return color(d.percentage);
       });
