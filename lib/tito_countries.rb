@@ -64,6 +64,7 @@ class TitoCountries
 
       countries.push({
         country_code: country_code,
+        alpha3: country.alpha3,
         name: country.common_name,
         longitude: country.longitude,
         latitude: country.latitude,
