@@ -1,5 +1,65 @@
 __webpack_public_path__ = "/_bridgetown/static/js/";
 
+function buildLegend(props) {
+  const { svgElement, data, valueExtent } = props;
+
+  const legendList = document.createElement("ol");
+  legendList.classList.add("map__legend");
+  svgElement.insertAdjacentElement("afterend", legendList);
+
+  const highestValue = valueExtent[1];
+  const minFontSize = 0.8;
+  const maxFontSizeForTag = 2;
+
+  data
+    .filter((c) => c.percentage > 1)
+    .forEach((country) => {
+      const legendItem = document.createElement("li");
+      legendItem.classList.add("map__legend-item");
+      legendItem.innerHTML = `
+        <span class="map__legend--name">
+          ${country.name}
+        </span>
+        <span class="map__legend--percentage">
+          (${country.percentage}%)
+        </span>`;
+
+      let fontSize = (country.percentage / highestValue) * maxFontSizeForTag;
+      if (fontSize < minFontSize) {
+        fontSize = minFontSize;
+      }
+      fontSize = +fontSize.toFixed(2);
+      const fontSizeProperty = `${fontSize}em`;
+      legendItem.style.fontSize = fontSizeProperty;
+
+      legendList.appendChild(legendItem);
+    });
+
+  const tail = data.filter((c) => c.percentage <= 1);
+
+  const joined = tail.map((country) => country.name).join(", ");
+
+  const tailItem = document.createElement("li");
+  tailItem.classList.add("map__legend-item");
+  tailItem.innerHTML = `
+    <span class="map__legend--name">
+      ${joined}
+    </span>
+    <span class="map__legend--percentage">
+      (≤ 1% each)
+    </span>`;
+  tailItem.style.fontSize = `${(minFontSize * 0.9).toFixed(2)}em`;
+
+  legendList.appendChild(tailItem);
+
+  const legendDisclaimer = document.createElement("p");
+  legendDisclaimer.classList.add("map__legend--disclaimer");
+  legendDisclaimer.innerText =
+    "Figures are based on billing countries as reported by ticket buyers. The data is updated sporadically.";
+
+  legendList.insertAdjacentElement("afterend", legendDisclaimer);
+}
+
 async function initializeMap(svgElement) {
   const d3 = await Promise.all([
     import("d3-array"),
@@ -31,12 +91,14 @@ async function initializeMap(svgElement) {
 
     // Create a color scale
     const valueExtent = d3.extent(data, (d) => +d.percentage);
+
+    buildLegend({ svgElement, data, valueExtent });
+
+    // Draw the map
     const color = d3
       .scaleSequential()
       .domain(valueExtent)
       .interpolator(d3.interpolateLab(d3.hsl(328, 0.3, 0.8), d3.hsl(328, 0.8, 0.55)));
-
-    // Draw the map
     const backgroundColor = "#000024";
     const graticuleColor = "#d74090";
     const graticuleStroke = 0.4;
