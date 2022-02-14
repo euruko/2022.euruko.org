@@ -19,6 +19,7 @@
 @use "blocks/header.scss";
 @use "blocks/hero.scss";
 @use "blocks/jobs.scss";
+@use "blocks/map.scss";
 @use "blocks/profile.scss";
 @use "blocks/schedule.scss";
 @use "blocks/section.scss";
@@ -29,13 +30,3 @@
 @use "blocks/table.scss";
 @use "blocks/tickets.scss";
 @use "blocks/video.scss";
-
-.map {
-  display: flex;
-  width: 100%;
-
-  &--svg {
-    width: 100%;
-    // height: 100%;
-  }
-}
