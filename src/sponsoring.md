@@ -15,7 +15,6 @@ Sponsoring Euruko gets you the opportunity to reach an international group of ta
 
 There’s a long tradition to keep Euruko tickets as affordable as possible to offer everyone the opportunity to attend and sponsors are an essential part of this.
 
-
 # Facts about Euruko
 
 * 500–700 in-person participants expected from Europe and elsewhere (plus virtual attendees from all over the world)
@@ -62,4 +61,4 @@ Do you have a fun idea? Let us know and we'll see what we can work out. For exam
 
 # Contact us
 
-Email [sponsors@euruko.org](mailto:sponsors@euruko.org) to inquire about sponsorships.
+Email [sponsors@euruko.org](mailto:sponsors@euruko.org) to inquire about sponsorships. Download the <a rel="noopener" target="_blank" href="{% link downloads/sponsorship-contract-2022.pdf %}">sponsorship contract</a> for terms and conditions.
