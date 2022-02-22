@@ -18,6 +18,6 @@ Admission is at your own risk. Additional restrictions on entry may be imposed b
 
 ## Supporters
 
-Euruko is brought to you by our [sponsors](/#sponsors), all attendees, and these fine people who were nice enought to splurge for a supporter ticket.
+Euruko is brought to you by our [sponsors](/#sponsors), all attendees, and these fine people who were nice enough to splurge for a supporter ticket.
 
 {% render "tickets/supporters", site: site %}
