@@ -69,6 +69,7 @@ async function initializeMap(svgElement) {
     import("d3-interpolate"),
     import("d3-scale"),
     import("d3-selection"),
+    import("d3-zoom"),
   ]).then((d3) => Object.assign({}, ...d3));
 
   const worldUrl = svgElement.dataset.world;
@@ -78,13 +79,63 @@ async function initializeMap(svgElement) {
     width = +svgElement.viewBox.baseVal.width,
     height = +svgElement.viewBox.baseVal.height;
 
-  // Map and projection
+  svg.append("style").text(`
+    .d3-country {
+      cursor: zoom-in;
+    }
+    .d3-country.d3-active {
+      cursor: zoom-out;
+    }
+  `);
+  const countriesGroup = svg.append("g");
+
   const projection = d3
     .geoNaturalEarth1()
     .center([0, 0]) // GPS of location to zoom on
     .scale(100) // This is like the zoom
     .translate([width / 2, height / 2]);
 
+  const path = d3.geoPath().projection(projection);
+
+  let active = d3.select(null);
+
+  const zoomed = (event) => {
+    countriesGroup.attr("transform", event.transform);
+  };
+  const zoom = d3.zoom().on("zoom", zoomed);
+
+  const clicked = (event, d) => {
+    console.log({ event, d });
+    if (active.node() === event.target) return reset();
+    active.classed("d3-active", false);
+    active = d3.select(event.target).classed("d3-active", true);
+
+    var bounds = path.bounds(d),
+      dx = bounds[1][0] - bounds[0][0],
+      dy = bounds[1][1] - bounds[0][1],
+      x = (bounds[0][0] + bounds[1][0]) / 2,
+      y = (bounds[0][1] + bounds[1][1]) / 2,
+      scale = Math.max(1, Math.min(8, 0.9 / Math.max(dx / width, dy / height))),
+      translate = [width / 2 - scale * x, height / 2 - scale * y];
+
+    svg
+      .transition()
+      .duration(750)
+      .call(zoom.transform, d3.zoomIdentity.translate(translate[0], translate[1]).scale(scale));
+  };
+
+  const reset = () => {
+    active.classed("d3-active", false);
+    active = d3.select(null);
+
+    svg
+      .transition()
+      .duration(750)
+      // .call( zoom.transform, d3.zoomIdentity.translate(0, 0).scale(1) ); // not in d3 v4
+      .call(zoom.transform, d3.zoomIdentity); // updated for d3 v4
+  };
+
+  // Map
   Promise.all([d3.json(worldUrl), d3.json(statsUrl)]).then(function (initialize) {
     let dataGeo = initialize[0];
     let data = initialize[1];
@@ -107,7 +158,7 @@ async function initializeMap(svgElement) {
     // .-. ..- -... -.--
     // R   U   B    Y
     const dashArray = "2 2 4 2 2 4 2 2 2 2 4 4 4 2 2 2 2 2 2 4 4 2 2 2 4 2 4 2";
-    svg
+    countriesGroup
       .append("path")
       .data([{ type: "Sphere" }])
       .join("path")
@@ -116,7 +167,7 @@ async function initializeMap(svgElement) {
       .style("stroke", graticuleColor)
       .style("stroke-width", graticuleStroke * 2)
       .style("opacity", 1);
-    svg
+    countriesGroup
       .append("path")
       .data([graticule])
       .join("path")
@@ -127,7 +178,7 @@ async function initializeMap(svgElement) {
       .style("stroke-dasharray", dashArray)
       .style("opacity", 1);
 
-    svg
+    countriesGroup
       .append("g")
       .selectAll("path")
       .data(dataGeo.features)
@@ -138,7 +189,9 @@ async function initializeMap(svgElement) {
         const stats = data.find((c) => c.alpha3 == d.id);
         d.percentage = stats?.percentage || 0;
         return color(d.percentage);
-      });
+      })
+      .classed("d3-country", (d) => d.percentage > 0)
+      .on("click", clicked);
   });
 }
 
