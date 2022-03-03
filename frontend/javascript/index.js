@@ -79,6 +79,7 @@ const setClickListeners = () => {
               behavior: "smooth",
               block: "start",
             });
+            history.replaceState({}, "", url.hash);
           }
         });
       }
