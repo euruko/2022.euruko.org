@@ -18,13 +18,14 @@
 
           {% for level in levels %}
             {% assign sponsors = collections.sponsors.resources | where: "data.level", level %}
-            {% for sponsor in sponsors %}
+            {% if sponsors.size > 0 %}
               <div class="sponsors__list sponsors__list--{{ level }}">
-                {{ sponsor.content }}
+                {% for sponsor in sponsors %}
+                    {{ sponsor.content }}
+                {% endfor %}
               </div>
-            {% endfor %}
+            {% endif %}
           {% endfor %}
-
           <h2 class="sponsors__text-right">Want to see your logo here? Consider <a href="/sponsoring">sponsoring us.</a></h2>
         </div>
       </div>
