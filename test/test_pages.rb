@@ -56,15 +56,14 @@ class TestPages < Minitest::Test
     end
   end
 
-  context "sitemap" do
-    setup do
-      page = site.pages.find { |doc| doc.url == "/sitemap.xml" }
-      document_root page
-    end
-    should "exist" do
-      assert_select "loc", { minimum: 5 }
-    end
-  end
+  # context "sitemap" do
+  #   setup do
+  #     document_root find_resource_by_url("/sitemap.xml")
+  #   end
+  #   should "exist" do
+  #     assert_select "loc", { minimum: 5 }
+  #   end
+  # end
 
   def find_resource_by_url(url)
     page = site.resources.find { |doc| doc.relative_url == url }
