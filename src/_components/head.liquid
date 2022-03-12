@@ -13,6 +13,17 @@
 
 <link rel="stylesheet" href="{% webpack_path css %}" />
 <script src="{% webpack_path js %}" defer></script>
+<script defer>
+  if ('serviceWorker' in navigator) {
+   window.addEventListener('load', () => {
+     navigator.serviceWorker.register('{% webpack_path service-worker.js %}').then(registration => {
+       console.log('SW registered: ', registration);
+     }).catch(registrationError => {
+       console.log('SW registration failed: ', registrationError);
+     });
+   });
+ }
+</script>
 
 <link rel="icon" type="image/svg+xml" href="{% webpack_path images/safari-pinned-tab.svg %}" />
 <link rel="icon" type="image/png" href="{% webpack_path images/favicon.png %}" />

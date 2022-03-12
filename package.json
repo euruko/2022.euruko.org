@@ -41,6 +41,7 @@
     "date-fns": "^2.28.0",
     "lite-youtube-embed": "^0.2.0",
     "sass-mq": "^6.0.0",
-    "smoothscroll-polyfill": "^0.4.4"
+    "smoothscroll-polyfill": "^0.4.4",
+    "workbox-webpack-plugin": "^6.5.1"
   }
 }

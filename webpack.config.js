@@ -1,6 +1,7 @@
 const path = require("path");
 const { merge } = require("webpack-merge");
 const CopyPlugin = require("copy-webpack-plugin");
+const { GenerateSW } = require("workbox-webpack-plugin");
 
 let config = require("./config/webpack.defaults.js");
 
@@ -24,6 +25,9 @@ let config = require("./config/webpack.defaults.js");
 //    config = merge(config, customConfig)
 //  ```
 
+// Used to break cache on generate of new SW where file is composed of multiple pieces that can't be watched.
+const genRanHex = (size = 24) => [...Array(size)].map(() => Math.floor(Math.random() * 16).toString(16)).join("");
+
 const customConfig = {
   plugins: [
     new CopyPlugin({
@@ -35,6 +39,33 @@ const customConfig = {
               `${context}/frontend/javascript`,
               path.dirname(absoluteFilename)
             )}/[name].[contenthash][ext]`;
+          },
+        },
+      ],
+    }),
+    new GenerateSW({
+      cacheId: genRanHex(),
+      cleanupOutdatedCaches: true,
+      clientsClaim: true,
+      directoryIndex: "index.html",
+      skipWaiting: true,
+      additionalManifestEntries: [
+        {
+          url: "/index.html",
+          revision: `${+new Date()}`,
+        },
+        {
+          url: "/code/index.html",
+          revision: `${+new Date()}`,
+        },
+      ],
+      navigationPreload: true,
+      runtimeCaching: [
+        {
+          handler: "NetworkFirst",
+          urlPattern: /^https?:\/\/(localhost|2022\.euruko\.org)(:\d+)?(|\/.*)$/,
+          options: {
+            cacheName: "core",
           },
         },
       ],
