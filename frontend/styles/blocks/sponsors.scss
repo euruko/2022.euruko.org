@@ -4,13 +4,13 @@
 .sponsors {
   &__card {
     position: relative;
-    flex-basis: calc(50% - 20px);
+    max-width: calc(50% - 20px);
     display: flex;
     flex-direction: column;
     align-items: center;
 
     @include mq.mq($until: desktop) {
-      flex-basis: calc(100% - 20px);
+      max-width: calc(100% - 20px);
     }
   }
 
@@ -119,6 +119,7 @@
         flex-basis: auto;
         justify-content: center;
         padding: 30px 25px;
+        height: 90px;
       }
 
       img {
