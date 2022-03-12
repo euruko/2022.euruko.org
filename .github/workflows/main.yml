@@ -34,13 +34,13 @@ jobs:
         run: yarn test
         if: success()
 
-      - name: Build
-        run: yarn deploy
-        if: success()
+      # - name: Build
+      #   run: yarn deploy
+      #   if: success()
 
-      - name: Deploy 🚀
-        uses: JamesIves/github-pages-deploy-action@4.1.4
-        if: ${{ success() && github.ref == 'refs/heads/main' }}
-        with:
-          branch: gh-pages
-          folder: output
+      # - name: Deploy 🚀
+      #   uses: JamesIves/github-pages-deploy-action@4.1.4
+      #   if: ${{ success() && github.ref == 'refs/heads/main' }}
+      #   with:
+      #     branch: gh-pages
+      #     folder: output
