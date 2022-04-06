@@ -52,7 +52,7 @@ class TestPages < Minitest::Test
       document_root find_resource_by_url("/sponsoring/")
     end
     should "exist" do
-      assert_select "h1", { text: /Sponsorship packages/, minimum: 1 }
+      assert_select "h2", { text: /Sponsorship packages/, minimum: 1 }
     end
   end
 
