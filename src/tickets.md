@@ -10,7 +10,7 @@ social_image: /images/social-tickets.png
 
 We will have free scholarship/diversity tickets available for members of underrepresented groups at a later date. Sign up for the [Euruko newsletter](/#newsletter) to stay informed.
 
-You may be required to wear a mask and/or present proof of vaccination.
+You may be required to wear a mask and/or present proof of vaccination. [Current recommendations and restrictions in Helsinki](https://www.hel.fi/helsinki/coronavirus-en/information/recommendations-and-restrictions-effective).
 
 By purchasing or accepting a ticket to the event you agree to follow the [Code of Conduct](/code) at all times during the conference.
 
