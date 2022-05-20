@@ -26,7 +26,7 @@ There are both virtual and in-person tickets available for members of historical
 
 ### Tickets for non-profits
 
-If you run a non-profit that promote tech skills or careers among historically marginalised or under-represented communities you can apply for tickets to give away to your attendees or members as you see fit. The exact number and type of tickets are decided on a case-by-case basis.
+If you run a non-profit that promotes tech skills or careers among historically marginalised or under-represented communities you can apply for tickets to give away to your attendees or members as you see fit. The exact number and type of tickets are decided on a case-by-case basis.
 
 → [Apply for non-profit tickets](https://docs.google.com/forms/d/e/1FAIpQLSfz4dsmAcCb0jUT5Re5C49Tyu3En3caTt6h5frTts13XL55QQ/viewform?usp=pp_url&entry.1858836928=Non-profit+tickets)
 
