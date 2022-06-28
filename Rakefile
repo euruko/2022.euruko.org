@@ -52,6 +52,8 @@ end
 namespace :tito do
   desc "Update the attendee country stats"
   task :country_stats, [:account_slug, :event_slug] do |_task, args|
+    require "./lib/tito_countries"
+
     logger = TTY::Logger.new
     stats_path = File.expand_path("./frontend/data/stats.json", __dir__)
     token_regexp = /\A(secret_)([^_]+)_(.+)\z/i
