@@ -26,6 +26,11 @@ form {
   font-size: 18px;
 
   background-color: white;
+
+  color: $grey-1;
+  &::placeholder {
+    color: $purple-1;
+  }
 }
 .form-email:focus {
   outline: none;
