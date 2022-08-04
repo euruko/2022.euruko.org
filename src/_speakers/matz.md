@@ -4,6 +4,8 @@ name: Yukihiro Matsumoto
 category: keynote
 url: https://twitter.com/yukihiro_matz
 url_type: twitter
+talks:
+  - keynote
 published: true
 ---
 

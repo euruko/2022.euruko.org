@@ -2,7 +2,7 @@
 
 .table {
   &__heading {
-    background: $blue-2;
+    background: $purple-1;
     font-weight: $semibold;
     padding: 12px;
     border-radius: 4px 4px 0 0;
@@ -11,10 +11,10 @@
   &__row {
     display: flex;
 
-    background: #fff;
+    background: $dark-blue-2;
 
     &:nth-child(2n) {
-      background: $blue-4;
+      background: $dark-blue-3;
     }
 
     &:last-child {
@@ -28,7 +28,7 @@
     width: 80px;
     font-weight: $semibold;
     text-align: center;
-    border-right: 2px solid $blue-2;
+    border-right: 2px solid $pink;
   }
 
   &__event {
