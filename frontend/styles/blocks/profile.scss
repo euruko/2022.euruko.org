@@ -94,7 +94,7 @@
     position: relative;
     display: block;
     text-align: center;
-    font-size: 1.25rem;
+    font-size: 1.2rem;
     font-weight: $semibold;
     color: white;
     margin-top: 16px;
@@ -109,5 +109,16 @@
     a.profile:hover & {
       text-decoration: underline;
     }
+  }
+
+  &__talk_title {
+    position: relative;
+    display: block;
+    text-align: center;
+    font-size: 0.75rem;
+    font-weight: $regular;
+    color: $pink;
+    margin-top: 0;
+    transition: all 0.15s ease-in-out;
   }
 }

@@ -23,6 +23,7 @@
     <span class="profile__name">
       {{ speaker.name }}
     </span>
+    {% if content %}<span class="profile__talk_title">{{ content }}</span>{% endif %}
   {% endcapture %}
   {% if speaker.url != blank %}
     <a
