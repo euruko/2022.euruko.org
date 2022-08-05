@@ -35,6 +35,7 @@ defaults:
       collection: "talks"
     values:
       layout: "page"
+      sitemap: false
 
 collections:
   speakers:
