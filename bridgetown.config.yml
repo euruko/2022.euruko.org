@@ -28,10 +28,30 @@ timezone: Europe/Helsinki
 # pagination:
 #   enabled: true
 
+defaults:
+  # - values:
+  #     layout: "default"
+  - scope:
+      collection: "talks"
+    values:
+      layout: "page"
+      sitemap: false
+
 collections:
-  - speakers
-  - benefits
-  - sponsors
+  speakers:
+    output: false
+    relations:
+      has_many: talks
+  talks:
+    layout: page
+    permalink: /talks/:group/:start_time/
+    output: true
+    relations:
+      belongs_to: speaker
+  benefits:
+    output: false
+  sponsors:
+    output: false
 
 include:
   - .nojekyll

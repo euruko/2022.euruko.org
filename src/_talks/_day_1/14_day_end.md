@@ -1,0 +1,9 @@
+---
+title: Day 1 ends
+group: Day 1
+start_time: 2022-10-13T16:50:00+0300
+end_time: 2022-10-13T17:00:00+0300
+speaker:
+published: true
+linkable: false
+---

@@ -15,11 +15,13 @@
       </div>
     </button>
     <nav class="header__navigation">
+      {% comment %}
       <a
         href="/#newsletter"
         class="header__link header__link--blue"
         >Newsletter</a
       >
+      {% endcomment %}
       <a
         href="/#speakers"
         class="header__link header__link--orange"
@@ -32,27 +34,19 @@
         class="header__link header__link--green"
         >Videos</a
       >
+      {% endcomment %}
       <a
         href="/#schedule"
         id="link-schedule"
         class="header__link header__link--blue"
         >Schedule</a
       >
-      {% endcomment %}
       <a
         href="/#sponsors"
         class="header__link header__link--pink"
         >Sponsors</a
       >
       <div class="header__divider"></div>
-      {% comment %}
-      <a
-        href="https://teespring.com/stores/euruko"
-        id="link-5"
-        class="header__link header__link--small header__link--teal"
-        >Shop</a
-      >
-      {% endcomment %}
       {% comment %}
       <a
         href="/jobs"
@@ -66,9 +60,10 @@
         >Tickets</a
       >
       <a
-        href="/cfp"
-        class="header__link header__link--small header__link--orange"
-        >CFP</a
+        href="https://store.euruko.org"
+        id="link-5"
+        class="header__link header__link--small header__link--teal"
+        >Merch store</a
       >
       <a
         href="/sponsoring"
