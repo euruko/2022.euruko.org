@@ -16,7 +16,7 @@ description: "Preliminary Euruko 2022 schedule"
 
       {% assign groups = collections.talks.resources | map: "group" | sort | uniq %}
       {% for group in groups %}
-        <div class="schedule__table">
+        <div class="schedule__table" id="{{ group | replace: " ", "-" | downcase }}">
           <div class="table">
             <div class="table__heading">
               {{ group }}

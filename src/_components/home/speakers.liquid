@@ -11,7 +11,7 @@
         Sign up for the newsletter to be the first to know about new speakers and the timing of the <abbr title="Call for Proposals">CFP</abbr>.
       </p>
       <div class="speakers__profiles">
-        {% assign categories = "keynote, mc, normal, lightning, cfp" | split: ", " %}
+        {% assign categories = "keynote, mc, normal, lightning, cfp, tba" | split: ", " %}
 
         {% for category in categories %}
           {% assign speakers = collections.speakers.resources | where: "data.category", category %}

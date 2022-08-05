@@ -35,6 +35,11 @@
       background: $sessionize;
       box-shadow: 0px 0px 10px $sessionize;
     }
+
+    .profile--tba & {
+      background: $dark-blue-4;
+      box-shadow: 0px 0px 10px $dark-blue-4;
+    }
   }
 
   &__background {
