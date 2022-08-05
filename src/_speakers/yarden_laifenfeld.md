@@ -1,7 +1,7 @@
 ---
 name: Yarden Laifenfeld
 category: normal
-url: https://twitter.com/YardenLaifenfe1
+url: https://github.com/yardenlaif
 published: true
 ---
 
