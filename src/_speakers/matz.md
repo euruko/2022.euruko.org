@@ -3,7 +3,7 @@ name: Matz
 category: keynote
 url: https://twitter.com/yukihiro_matz
 talks:
-  - keynote
+  - 03_keynote
 published: true
 ---
 

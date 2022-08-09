@@ -3,7 +3,7 @@ title: To Be Announced
 name: TBA
 category: tba
 url:
-published: true
+published: false
 ---
 
 {% capture image %}{% webpack_path images/speakers/tba.svg %}{% endcapture %}

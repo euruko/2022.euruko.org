@@ -14,7 +14,10 @@
         {% assign categories = "keynote, mc, normal, lightning, cfp, tba" | split: ", " %}
 
         {% for category in categories %}
-          {% assign speakers = collections.speakers.resources | where: "data.category", category %}
+          {% assign speakers = collections.speakers.resources | where: "data.category", category | sort: "name" %}
+          {% if category == "keynote" %}
+            {% assign speakers =  speakers | reverse %}
+          {% endif %}
           {% for speaker in speakers %}
             {{ speaker.content }}
           {% endfor %}
