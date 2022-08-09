@@ -25,9 +25,11 @@
     </span>
     {% if content %}<span class="profile__talk_title">{{ content }}</span>{% endif %}
   {% endcapture %}
-  {% if speaker.url != blank %}
+  {% assign url_or_twitter = speaker.twitter | default: speaker.url %}
+  {% assign url = url_or_twitter | default: speaker.github %}
+  {% if url != blank %}
     <a
-      href="{{ speaker.url }}"
+      href="{{ url }}"
       class="profile profile--keynote"
     >
       {{ card_contents | raw }}
