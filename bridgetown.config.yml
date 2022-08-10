@@ -44,7 +44,7 @@ collections:
       has_many: talks
   talks:
     layout: page
-    permalink: /talks/:group/:start_time/
+    permalink: /schedule/:group/:speaker_or_slug/
     output: true
     relations:
       belongs_to: speaker
