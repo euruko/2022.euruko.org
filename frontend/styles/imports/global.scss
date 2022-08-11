@@ -123,6 +123,10 @@ h3 {
 
 a {
   color: $pink;
+
+  &:hover {
+    text-decoration: none;
+  }
 }
 
 th,
