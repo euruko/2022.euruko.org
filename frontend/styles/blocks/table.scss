@@ -9,11 +9,14 @@
     padding: 12px;
     border-radius: 4px 4px 0 0;
     margin-top: 0 !important;
+    margin-bottom: 0;
     font-size: 32px;
   }
 
   &__row {
     display: flex;
+    border-left: 1px solid $dark-blue-3;
+    border-right: 1px solid $dark-blue-3;
 
     &:nth-child(2n) {
       background-color: $dark-blue-3;
@@ -21,6 +24,7 @@
 
     &:last-child {
       border-radius: 0 0 4px 4px;
+      border-bottom: 1px solid $dark-blue-3;
     }
   }
 
