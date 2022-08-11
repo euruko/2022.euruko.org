@@ -2,6 +2,8 @@
 @use "~sass-mq/mq.scss";
 
 .footer {
+  margin-top: auto;
+
   &__container {
     border-top: 1px solid $pink-light;
     padding: 10px 60px;
