@@ -1,20 +1,22 @@
 @use "imports/variables.scss" as *;
 
 .table {
+  border-radius: 10px;
   &__heading {
-    background: $purple-1;
+    background: $pink;
+    color: white;
     font-weight: $semibold;
     padding: 12px;
     border-radius: 4px 4px 0 0;
+    margin-top: 0 !important;
+    font-size: 32px;
   }
 
   &__row {
     display: flex;
 
-    background: $dark-blue-2;
-
     &:nth-child(2n) {
-      background: $dark-blue-3;
+      background-color: $dark-blue-3;
     }
 
     &:last-child {
@@ -22,9 +24,20 @@
     }
   }
 
+  &__row {
+    &:nth-child(2n) {
+      .read-more__footer {
+        background-color: $dark-blue-3;
+      }
+      .read-more__footer:before {
+        background-image: linear-gradient(rgba(255, 255, 255, 0) 0%, $dark-blue-3 100%);
+      }
+    }
+  }
+
   &__time {
     flex: 0 0 80px;
-    padding: 12px 0;
+    padding: 16px 0;
     width: 80px;
     font-weight: $semibold;
     text-align: center;
@@ -33,12 +46,25 @@
 
   &__event {
     flex: 1 1 auto;
-    padding: 12px;
+    padding: 16px 32px;
     font-weight: $semibold;
+  }
+
+  &__event-title {
+    font-size: 20px;
+  }
+
+  &__event-link {
+    color: $pink-light;
   }
 
   &__description {
     font-weight: $regular;
+    font-size: 16px;
+  }
+
+  &__description a {
+    color: $pink-light;
   }
   &__description p {
     margin-bottom: 0.5rem;
@@ -46,5 +72,46 @@
 
   &__speaker {
     font-weight: $regular;
+  }
+
+  .read-more {
+    position: relative;
+    overflow: hidden;
+    padding-bottom: 1rem;
+  }
+
+  .read-more__content {
+    overflow: hidden;
+    transition: height 0.3s;
+  }
+
+  .read-more__footer {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    padding-top: 24px;
+    background-color: $dark-blue-2;
+  }
+
+  .read-more__footer a {
+    color: white;
+    font-weight: $regular;
+  }
+
+  .read-more__footer:before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100px;
+    top: -100px;
+    left: 0;
+    background-image: linear-gradient(rgba(255, 255, 255, 0) 0%, $dark-blue-2 100%);
+    transition: opacity 0.3s;
+  }
+
+  .read-more.is-active .read-more__footer:before {
+    opacity: 0;
   }
 }
