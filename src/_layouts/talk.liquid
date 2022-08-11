@@ -38,16 +38,23 @@ layout: default
             <h1 id="heading-info" class="section__heading section__heading--teal">
               {{ speaker.name }}
             </h1>
-            {% comment %}
             <p class="section__info">
-              {{ description }}
+              {{ speaker.tagline }}
             </p>
-            {% endif %}
-            {% endcomment %}
           </div>
           <div class="section__large-column">
             <div class="section__content">
               {{ speaker.bio | markdownify }}
+
+              {% if speaker.website %}
+                <a href="{{speaker.github}}" class="section__cta section__cta--teal">Website</a>
+              {% endif %}
+              {% if speaker.github %}
+                <a href="{{speaker.github}}" class="section__cta section__cta--teal">GitHub</a>
+              {% endif %}
+              {% if speaker.twitter %}
+                <a href="{{speaker.github}}" class="section__cta section__cta--teal">Twitter</a>
+              {% endif %}
             </div>
           </div>
         </div>
