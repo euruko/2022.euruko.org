@@ -21,9 +21,10 @@ form {
   padding: 0 24px;
 
   border: 2px solid white;
-  border-radius: 60px;
+  border-radius: 5px;
 
   font-size: 18px;
+  filter: drop-shadow(1px 1px 3px $pink);
 
   background-color: white;
 
