@@ -24,6 +24,8 @@ gem "http", "~> 5.0.4"
 gem "countries", "~> 4.2.1"
 gem "tty-logger"
 
+gem "icalendar", "~> 2.8.0"
+
 group :test, optional: true do
   gem "nokogiri"
   gem "minitest"

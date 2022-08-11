@@ -152,7 +152,12 @@
       display: block;
     }
   }
-
+  &__heading--schedule {
+    margin-bottom: 0;
+    @include mq.mq($until: wide) {
+      margin-bottom: 0px;
+    }
+  }
   &__info {
     margin-top: -40px;
     margin-bottom: 60px;

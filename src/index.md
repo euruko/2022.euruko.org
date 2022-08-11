@@ -5,9 +5,9 @@ title: ""
 
 {% render "home/hero", site: site, page: page %}
 {% render "home/about" %}
-<!-- {% render "home/newsletter" %} -->
+{% comment %}{% render "home/newsletter" %}{% endcomment %}
 {% render "home/speakers", collections: collections %}
-{% render "home/schedule" %}
+{% comment %}{% render "home/schedule" %}{% endcomment %}
 {% rendercontent "home/location" %}
 Euruko 2022 will be held at the historic Paasitorni venue. The ruggedly beautiful granite building is in Hakaniemi, right in the centre of Helsinki. It is connected to the Scandic Paasi hotel right next door. The venue is accessible to wheelchair users, but if you have any questions please [get in touch with the venue](https://www.paasitorni.fi/en/contact/) or the Euruko 2022 organisers.
 {%- endrendercontent -%}
@@ -19,11 +19,11 @@ The closest hotel to the venue is the [Scandic Paasi](https://www.scandichotels.
 
 The easiest way to get to the venue (if your hotel isn't within walking distance) is probably by public transportation as the venue is reachable by metro, tram, or bus. Check the [HSL](https://www.hsl.fi/en) website for more information about public transportation in Helsinki.
 
-<!-- <div>
+{% comment %}
   <a href="https://example.com" class="section__cta section__cta--teal">
     Example call to action
   </a>
-</div> -->
+{% endcomment %}
 
 {%- endrendercontent -%}
 

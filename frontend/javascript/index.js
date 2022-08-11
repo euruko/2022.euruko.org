@@ -1,5 +1,6 @@
 import smoothscroll from "smoothscroll-polyfill";
 import formatDistanceToNow from "date-fns/formatDistanceToNow";
+import ClipboardJS from "clipboard";
 
 import "map.js";
 
@@ -21,6 +22,7 @@ window.addEventListener(
     setIntersectionObserver();
     linkDateBlocker();
     discountCodeApplicator();
+    clipboardHandlers();
   },
   false
 );
@@ -169,4 +171,15 @@ const discountCodeApplicator = () => {
       }
     }
   }
+};
+
+const clipboardHandlers = () => {
+  const clipboard = new ClipboardJS("button[data-clipboard-target]");
+  clipboard.on("success", function ({ trigger }) {
+    const oldLabel = trigger.innerText;
+    trigger.innerText = "Copied!";
+    setTimeout(() => {
+      trigger.innerText = oldLabel;
+    }, 3000);
+  });
 };

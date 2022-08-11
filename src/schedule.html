@@ -1,98 +1,137 @@
 ---
-layout: page
+layout: default
 title: "Schedule"
-description: "Preliminary Euruko 2022 schedule"
-sitemap: false
-published: false
+description: "Euruko 2022 schedule"
+social_image: "/images/social-schedule.png"
+sitemap: true
+published: true
 ---
 
-<section id="schedule" class="section section--blue schedule">
-  <div class="section__container">
-    <div class="section__inner-container">
-      <h1 id="heading-schedule" class="section__heading section__heading--blue">
-        Schedule
-      </h1>
-      <p class="section__info">
-        The schedule is subject to change. All times are local to Helsinki.
-      </p>
+{% render "sidekick", page: page, site: site %}
 
-      {% assign groups = collections.talks.resources | map: "group" | sort | uniq %}
-      {% for group in groups %}
-        <div class="schedule__table" id="{{ group | replace: " ", "-" | downcase }}">
-          <div class="table">
-            <div class="table__heading">
-              {{ group }}
-            </div>
-            <div class="table__table">
-              {% assign talks = collections.talks.resources | where: "data.group", group | sort: "data.start_time" %}
-              {% for talk in talks %}
-                <div class="table__row">
-                  <div class="table__time">
-                    <time datetime="{{ talk.start_time }}">
-                      {{ talk.data.start_time | date: "%H:%M" }}
-                    </time>
-                  </div>
-                  <div class="table__event">
-                    {% if talk.data.linkable %}
-                      <a href="{{ talk.relative_url }}">{{ talk.data.title }}</a>
-                    {% else %}
-                      {{ talk.data.title }}
-                    {% endif %}
-                    {% if talk.relations.speaker %}
-                    <span class="table__speaker">({{ talk.relations.speaker.data.name }})</span>
-                    {% endif %}
-                    {% if talk.title %}
-                    <div class="table__description">{{ talk.content }}</div>
-                    {% endif %}
-                  </div>
+{% assign groups = collections.talks.resources | map: "group" | sort | uniq %}
+{% for group in groups %}
+  {% assign talks = collections.talks.resources | where: "data.group", group | sort: "data.start_time" %}
+  <section id="{{ group | replace: " ", "-" | downcase }}" class="section section--{% cycle "lightdarkblue", "darkblue" %} schedule">
+    <div class="section__container">
+      <div class="section__inner-container">
+        <div class="section__columns">
+          <div class="section__very-small-column">
+            <h1 id="heading-schedule" class="section__heading section__heading--blue section__heading--schedule">
+              {% assign first = talks | first %}
+              {{ first.start_time | date: "%A" }}
+            </h1>
+          </div>
+
+          <div class="section__very-large-column">
+            <div class="schedule__table">
+              <div class="table">
+                <h3 class="table__heading">
+                  {{ first.start_time | date: "%d.%m." }}
+                </h3>
+                <div class="table__table">
+                  {% for talk in talks %}
+                    <div class="table__row">
+                      <div class="table__time">
+                        <time datetime="{{ talk.start_time }}">
+                          {{ talk.data.start_time | date: "%H:%M" }}
+                        </time>
+                      </div>
+                      <div class="table__event">
+                        <h4 class="table__event-title">
+                          {% if talk.data.linkable %}
+                            <a class="table__event-link" href="{{ talk.relative_url }}">{{ talk.data.title }}</a>
+                          {% else %}
+                            {{ talk.data.title }}
+                          {% endif %}
+                          {% if talk.relations.speaker %}
+                          <span class="table__speaker">by {{ talk.relations.speaker.data.name }}</span>
+                          {% endif %}
+                        </h4>
+
+                        {% if talk.data.summary != blank or talk.content != blank %}
+                          <div class="table__content">
+                            {% if talk.data.summary != blank %}
+                              {{ talk.data.summary }}
+                            {% else %}
+                              {{ talk.content | markdownify }}
+                            {% endif %}
+                          </div>
+                        {% endif %}
+
+                      </div>
+                    </div>
+                  {% endfor %}
                 </div>
-              {% endfor %}
+              </div>
             </div>
           </div>
+      </div>
+    </div>
+  </section>
+{% endfor %}
+
+<section id="info" class="section section--lightdarkblue">
+  <div class="section__container">
+    <div class="section__inner-container">
+      <div class="section__columns">
+        <div class="section__very-small-column">
+          <h1 id="heading-info" class="section__heading section__heading--teal">
+            Subscribe
+          </h1>
         </div>
-      {% endfor %}
+        <div class="section__very-large-column">
+          <div class="section__content">
+            <p class="schedule__calendar">
+              To subscribe to the calendar feed, copy-paste the following URL to your calendar:
+            </p>
 
-      <p class="schedule__calendar">
-        To subscribe to the calendar feed, copy-paste the following URL to your calendar:
-      </p>
+            <div class="schedule__calendar_url">
+              <input id="calendarUrl" class="form-url" value="{{ "/schedule.ics" | absolute_url }}" type="url" readonly>
+              <button aria-label="Copy calendar feed URL to the clipboard" data-clipboard-target="#calendarUrl">Copy</button>
+            </div>
 
-      <input id="calendarUrl" class="form-url" value="https://2022.euruko.org/schedule.ics" type="url" readonly>
-
-      <ul>
-        <li>
-          <a
-            target="_blank"
-            rel="noopener noreferrer"
-            href="https://support.google.com/calendar/answer/37100?hl=en">
-            Google Calendar instructions
-          </a>
-        </li>
-        <li>
-          <a
-            target="_blank"
-            rel="noopener noreferrer"
-            href="https://support.apple.com/en-us/HT202361">
-            macOS Calendar instructions
-          </a>
-        </li>
-        <li>
-          <a
-            target="_blank"
-            rel="noopener noreferrer"
-            href="https://support.apple.com/guide/iphone/use-multiple-calendars-iph3d1110d4/ios#iph30203de42">
-            iOS Calendar instructions
-          </a>
-        </li>
-        <li>
-          <a
-            target="_blank"
-            rel="noopener noreferrer"
-            href="https://support.microsoft.com/en-us/office/import-or-subscribe-to-a-calendar-in-outlook-on-the-web-503ffaf6-7b86-44fe-8dd6-8099d95f38df">
-            Outlook instructions
-          </a>
-          &nbsp;(subscribe, don't import)
-        </li>
-      </ul>
+            <ul class="schedule__list">
+              <li>
+                <a
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  href="https://support.google.com/calendar/answer/37100?hl=en">
+                  <img height="40px" width="40px" alt="" aria-hidden="true" src="{% webpack_path images/schedule/google-calendar-icon.svg %}"/>
+                  <span>Google Calendar instructions</span>
+                </a>
+              </li>
+              <li>
+                <a
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  href="https://support.apple.com/en-us/HT202361">
+                  <img height="40px" width="40px" alt="" aria-hidden="true" src="{% webpack_path images/schedule/macos-icon.svg %}"/>
+                  <span>macOS Calendar instructions</span>
+                </a>
+              </li>
+              <li>
+                <a
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  href="https://support.apple.com/guide/iphone/use-multiple-calendars-iph3d1110d4/ios#iph30203de42">
+                  <img height="40px" width="40px" alt="" aria-hidden="true" src="{% webpack_path images/schedule/ios-icon.svg %}"/>
+                  <span>iOS Calendar instructions</span>
+                </a>
+              </li>
+              <li>
+                <a
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  href="https://support.microsoft.com/en-us/office/import-or-subscribe-to-a-calendar-in-outlook-on-the-web-503ffaf6-7b86-44fe-8dd6-8099d95f38df">
+                  <img height="40px" width="40px" alt="" aria-hidden="true" src="{% webpack_path images/schedule/outlook-icon.svg %}"/>
+                  <span>Outlook instructions</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </section>

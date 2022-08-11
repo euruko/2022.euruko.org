@@ -6,6 +6,10 @@ Bridgetown::Resource::PermalinkProcessor.register_placeholder :group, ->(resourc
   "#{resource.data.group}"
 end
 
-Bridgetown::Resource::PermalinkProcessor.register_placeholder :start_time, ->(resource) do
-  "#{resource.data.start_time.strftime("%H%M")}"
+Bridgetown::Resource::PermalinkProcessor.register_placeholder :speaker_or_slug, ->(resource) do
+  if resource.relations.speaker
+    resource.relations.speaker.data.name
+  else
+    resource.data.slug.gsub("_", "-")
+  end
 end

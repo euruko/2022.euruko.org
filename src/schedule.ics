@@ -1,0 +1,7 @@
+---
+template_engine: erb
+---
+<%= render CalendarComponent.new(
+  talks: collections.talks.resources,
+  default_location: "Paasitorni, Paasivuorenkatu 5 A, Helsinki"
+) %>
