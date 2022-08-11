@@ -1,4 +1,5 @@
 @use "imports/variables.scss" as *;
+@use "~sass-mq/mq.scss";
 
 .table {
   border-radius: 10px;
@@ -46,16 +47,28 @@
     font-weight: $semibold;
     text-align: center;
     border-right: 2px solid $pink;
+
+    @include mq.mq($until: tablet) {
+      padding: 8px 0;
+    }
   }
 
   &__event {
     flex: 1 1 auto;
     padding: 16px 32px;
     font-weight: $semibold;
+
+    @include mq.mq($until: tablet) {
+      padding: 8px 16px;
+    }
   }
 
   &__event-title {
     font-size: 20px;
+
+    @include mq.mq($until: tablet) {
+      font-size: 18px;
+    }
   }
 
   &__event-link {
