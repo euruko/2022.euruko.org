@@ -5,7 +5,7 @@
   &__table,
   &__calendar {
     @include mq.mq($until: wide) {
-      margin-top: 40px;
+      margin-top: 20px;
     }
   }
 
