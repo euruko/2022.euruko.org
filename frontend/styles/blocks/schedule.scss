@@ -19,6 +19,7 @@
     gap: 1rem;
     list-style: none;
     padding: 0;
+    max-width: 380px;
 
     li a {
       display: block;
@@ -37,19 +38,27 @@
   }
 
   &__calendar_url {
-    position: relative;
+    display: flex;
+    flex-direction: row;
 
     button {
+      width: 140px;
+      border: 1px solid $pink;
+      border-radius: 5px;
       height: 60px;
+      margin-left: 12px;
       padding: 0 24px;
       color: $dark-blue-2;
-      position: absolute;
-      right: 0;
-      top: 0;
       transition: color 0.25s ease;
+      color: $pink;
+
+      transition: box-shadow 150ms cubic-bezier(0.236, 0, 0.236, 1);
+      @media (prefers-reduced-motion: reduce) {
+        transition: none;
+      }
 
       &:hover {
-        color: $pink;
+        box-shadow: 0 0 6px 0 $pink;
       }
     }
   }
