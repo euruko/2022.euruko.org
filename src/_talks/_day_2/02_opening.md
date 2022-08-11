@@ -6,4 +6,5 @@ end_time: 2022-10-14T10:30:00+0300
 speaker:
 published: true
 linkable: false
+ics: true
 ---

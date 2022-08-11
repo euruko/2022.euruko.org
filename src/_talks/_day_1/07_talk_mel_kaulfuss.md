@@ -6,7 +6,9 @@ end_time: 2022-10-13T13:40:00+0300
 speaker: mel_kaulfuss
 published: true
 linkable: true
+ics: true
 summary: Discover how to approach CI/CD with an SRE mindset. Learn what SLOs, SLIs & error budgets are, and how to define them for your own build & deploy processes. Rebuild trust with your system’s stakeholders, and reclaim control over slow & unreliable build and deploy processes.
+social_image: /images/talks/mel_kaulfuss.png
 ---
 
 Continuous Integration and Deployment is the automation of building and testing code, CI/CD allows teams to ship code easily and frequently, with a high level of trust that end users won’t be impacted by bugs. What happens when painfully slow and unreliable CI/CD systems hinder our ability to deliver?

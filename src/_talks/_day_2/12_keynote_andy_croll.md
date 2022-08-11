@@ -6,10 +6,12 @@ end_time: 2022-10-14T16:00:00+0300
 speaker: andy_croll
 published: true
 linkable: true
+ics: true
 summary: |
   As a society we have an attribution problem. People who look like me get it easy. Join me to explore how we can push back on the default stories & myths of who is providing value in our community.
 
   Warning, may contain content that will make you uncomfortable about your own past behaviour. But you'll leave better able to provide a better industry for your fellow humans.
+social_image: /images/talks/andy_croll.png
 ---
 
 Until recently, to my shame, I'd never heard of [Dame "Steve" Shirley](https://en.wikipedia.org/wiki/Steve_Shirley). She innovated on remote work, part-time work, women in entrepreneurship—going on to become a Dame, and member of one of the highest order of the Commonwealth. So how come, with my traditional CS education, her work was a revelation in my late thirties?

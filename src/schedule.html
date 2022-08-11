@@ -62,7 +62,10 @@ published: true
   To subscribe to the calendar feed, copy-paste the following URL to your calendar:
 </p>
 
-<input id="calendarUrl" class="form-url" value="https://2022.euruko.org/schedule.ics" type="url" readonly>
+<div class="schedule__calendar_url">
+  <input id="calendarUrl" class="form-url" value="{{ "/schedule.ics" | absolute_url }}" type="url" readonly>
+  <button aria-label="Copy calendar feed URL to the clipboard" data-clipboard-target="#calendarUrl">Copy</button>
+</div>
 
 <ul class="schedule__list">
   <li>

@@ -6,6 +6,8 @@ end_time: 2022-10-13T23:59:59+0300
 speaker:
 published: true
 linkable: false
+ics: true
+location: "Kaivohuone, Iso Puistotie 1, Helsinki"
 ---
 
 The conference party at [Kaivohuone](https://www.kaivohuone.fi).

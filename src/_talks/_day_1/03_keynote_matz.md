@@ -6,6 +6,8 @@ end_time: 2022-10-13T11:10:00+0300
 speaker: matz
 published: true
 linkable: true
+ics: true
+social_image: /images/talks/matz.png
 ---
 
 Keynote details to come!

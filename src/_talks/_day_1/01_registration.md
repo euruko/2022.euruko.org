@@ -6,6 +6,7 @@ end_time: 2022-10-13T10:00:00+0300
 speaker:
 published: true
 linkable: false
+ics: true
 ---
 
 The doors at the venue open and we start accepting registrations.

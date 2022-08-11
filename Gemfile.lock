@@ -98,6 +98,9 @@ GEM
       concurrent-ruby (~> 1.0)
     i18n_data (0.16.0)
       simple_po_parser (~> 1.1)
+    icalendar (2.8.0)
+      ice_cube (~> 0.16)
+    ice_cube (0.16.4)
     kramdown (2.4.0)
       rexml
     kramdown-parser-gfm (1.1.0)
@@ -183,6 +186,7 @@ DEPENDENCIES
   bridgetown-sitemap (~> 1.1)
   countries (~> 4.2.1)
   http (~> 5.0.4)
+  icalendar (~> 2.8.0)
   minitest
   minitest-profile
   minitest-reporters

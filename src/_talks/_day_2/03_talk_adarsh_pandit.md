@@ -6,8 +6,10 @@ end_time: 2022-10-14T11:10:00+0300
 speaker: adarsh_pandit
 published: true
 linkable: true
+ics: true
 summary: |
   This is a talk which reviews all of the things which enable Ruby developers to use a secure programming language with easy package management in a supportive community. Specifically we will be tracking money spent and code shipped.
+social_image: /images/talks/adarsh_pandit.png
 ---
 
 This is a broad talk which reviews all of the things which enable Ruby developers to work in a fun, enjoyable programming language which is secure, allows for easy package management, and has a supportive community. Specifically we will be tracking money spent and code shipped. This will cover a lot of ground quickly and broadly, with lots of humor, so it will be both compelling and informative for the viewer.

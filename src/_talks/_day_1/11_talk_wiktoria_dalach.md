@@ -6,7 +6,9 @@ end_time: 2022-10-13T15:40:00+0300
 speaker: wiktoria_dalach
 published: true
 linkable: true
+ics: true
 summary: Security doesn’t have to be scary. From this talk, you will learn 5 tips that can almost immediately make your code base more secure.
+social_image: /images/talks/wiktoria_dalach.png
 ---
 
 There are so many myths about security, and how difficult it is. Often devs choose to ignore it because they think that writing more secure code would take them ages. It is not true. Security doesn’t have to be scary. In my talk, I share 5 tips that can almost immediately make a product more secure.

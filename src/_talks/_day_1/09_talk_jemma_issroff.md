@@ -6,7 +6,9 @@ end_time: 2022-10-13T14:30:00+0300
 speaker: jemma_issroff
 published: true
 linkable: true
+ics: true
 summary: Object Shapes are a technique for representing objects' properties that can increase cache hits in instance variable lookups, decrease runtime checks, and improve JIT performance. In this talk, we'll learn how they work, why implement them, and interesting implementation details.
+social_image: /images/talks/jemma_issroff.png
 ---
 
 Object Shapes are a technique for representing objects' properties that can increase cache hits in instance variable lookups, decrease runtime checks, and improve JIT performance. In this talk, we'll learn how they work, why implement them, and interesting implementation details.
