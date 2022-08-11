@@ -34,7 +34,7 @@ defaults:
   - scope:
       collection: "talks"
     values:
-      layout: "page"
+      layout: "talk"
       sitemap: false
 
 collections:
