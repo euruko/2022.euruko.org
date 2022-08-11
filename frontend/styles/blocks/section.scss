@@ -7,10 +7,6 @@
   padding-top: $header-height;
   pointer-events: none;
 
-  & + footer {
-    margin-top: 2rem;
-  }
-
   &__container {
     padding: 150px 80px 150px 80px;
     pointer-events: auto;

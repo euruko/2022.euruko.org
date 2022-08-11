@@ -46,14 +46,18 @@ layout: default
             <div class="section__content">
               {{ speaker.bio | markdownify }}
 
-              {% if speaker.website %}
-                <a href="{{speaker.github}}" class="section__cta section__cta--teal">Website</a>
-              {% endif %}
-              {% if speaker.github %}
-                <a href="{{speaker.github}}" class="section__cta section__cta--teal">GitHub</a>
-              {% endif %}
-              {% if speaker.twitter %}
-                <a href="{{speaker.github}}" class="section__cta section__cta--teal">Twitter</a>
+              {% if speaker.website or speaker.github or speaker.twitter%}
+                <p>
+                  {% if speaker.website %}
+                    <a href="{{speaker.github}}" class="section__cta section__cta--teal">Website</a>
+                  {% endif %}
+                  {% if speaker.github %}
+                    <a href="{{speaker.github}}" class="section__cta section__cta--teal">GitHub</a>
+                  {% endif %}
+                  {% if speaker.twitter %}
+                    <a href="{{speaker.github}}" class="section__cta section__cta--teal">Twitter</a>
+                  {% endif %}
+                </p>
               {% endif %}
             </div>
           </div>
