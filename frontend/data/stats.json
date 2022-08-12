@@ -8,7 +8,18 @@
     "world_region": "EMEA",
     "region": "Europe",
     "subregion": "Western Europe",
-    "percentage": 29
+    "percentage": 25
+  },
+  {
+    "country_code": "GB",
+    "alpha3": "GBR",
+    "name": "United Kingdom",
+    "longitude": -3.435973,
+    "latitude": 55.378051,
+    "world_region": "EMEA",
+    "region": "Europe",
+    "subregion": "Northern Europe",
+    "percentage": 10
   },
   {
     "country_code": "PL",
@@ -19,14 +30,25 @@
     "world_region": "EMEA",
     "region": "Europe",
     "subregion": "Eastern Europe",
-    "percentage": 10
+    "percentage": 9
   },
   {
-    "country_code": "GB",
-    "alpha3": "GBR",
-    "name": "United Kingdom",
-    "longitude": -3.435973,
-    "latitude": 55.378051,
+    "country_code": "ES",
+    "alpha3": "ESP",
+    "name": "Spain",
+    "longitude": -3.74922,
+    "latitude": 40.46366700000001,
+    "world_region": "EMEA",
+    "region": "Europe",
+    "subregion": "Southern Europe",
+    "percentage": 7
+  },
+  {
+    "country_code": "DK",
+    "alpha3": "DNK",
+    "name": "Denmark",
+    "longitude": 9.501785,
+    "latitude": 56.26392,
     "world_region": "EMEA",
     "region": "Europe",
     "subregion": "Northern Europe",
@@ -41,29 +63,18 @@
     "world_region": "EMEA",
     "region": "Europe",
     "subregion": "Western Europe",
-    "percentage": 7
+    "percentage": 5
   },
   {
-    "country_code": "DK",
-    "alpha3": "DNK",
-    "name": "Denmark",
-    "longitude": 9.501785,
-    "latitude": 56.26392,
-    "world_region": "EMEA",
-    "region": "Europe",
-    "subregion": "Northern Europe",
-    "percentage": 6
-  },
-  {
-    "country_code": "ES",
-    "alpha3": "ESP",
-    "name": "Spain",
-    "longitude": -3.74922,
-    "latitude": 40.46366700000001,
-    "world_region": "EMEA",
-    "region": "Europe",
-    "subregion": "Southern Europe",
-    "percentage": 6
+    "country_code": "XX",
+    "alpha3": "XXX",
+    "name": "Unknown",
+    "longitude": 0,
+    "latitude": 0,
+    "world_region": "Unknown",
+    "region": "Unknown",
+    "subregion": "Unknown",
+    "percentage": 4
   },
   {
     "country_code": "NL",
@@ -74,7 +85,7 @@
     "world_region": "EMEA",
     "region": "Europe",
     "subregion": "Western Europe",
-    "percentage": 5
+    "percentage": 4
   },
   {
     "country_code": "US",
@@ -85,40 +96,29 @@
     "world_region": "AMER",
     "region": "Americas",
     "subregion": "Northern America",
-    "percentage": 3
+    "percentage": 4
   },
   {
-    "country_code": "FI",
-    "alpha3": "FIN",
-    "name": "Finland",
-    "longitude": 25.7481511,
-    "latitude": 61.92410999999999,
+    "country_code": "HR",
+    "alpha3": "HRV",
+    "name": "Croatia",
+    "longitude": 15.2000001,
+    "latitude": 45.1,
     "world_region": "EMEA",
     "region": "Europe",
-    "subregion": "Northern Europe",
-    "percentage": 3
+    "subregion": "Southern Europe",
+    "percentage": 2
   },
   {
-    "country_code": "UA",
-    "alpha3": "UKR",
-    "name": "Ukraine",
-    "longitude": 31.1655799,
-    "latitude": 48.379433,
+    "country_code": "CZ",
+    "alpha3": "CZE",
+    "name": "Czechia",
+    "longitude": 15.472962,
+    "latitude": 49.81749199999999,
     "world_region": "EMEA",
     "region": "Europe",
     "subregion": "Eastern Europe",
-    "percentage": 3
-  },
-  {
-    "country_code": "SE",
-    "alpha3": "SWE",
-    "name": "Sweden",
-    "longitude": 18.643501,
-    "latitude": 60.12816100000001,
-    "world_region": "EMEA",
-    "region": "Europe",
-    "subregion": "Northern Europe",
-    "percentage": 3
+    "percentage": 2
   },
   {
     "country_code": "SK",
@@ -132,14 +132,36 @@
     "percentage": 2
   },
   {
-    "country_code": "FR",
-    "alpha3": "FRA",
-    "name": "France",
-    "longitude": 2.213749,
-    "latitude": 46.227638,
+    "country_code": "UA",
+    "alpha3": "UKR",
+    "name": "Ukraine",
+    "longitude": 31.1655799,
+    "latitude": 48.379433,
     "world_region": "EMEA",
     "region": "Europe",
-    "subregion": "Western Europe",
+    "subregion": "Eastern Europe",
+    "percentage": 2
+  },
+  {
+    "country_code": "SE",
+    "alpha3": "SWE",
+    "name": "Sweden",
+    "longitude": 18.643501,
+    "latitude": 60.12816100000001,
+    "world_region": "EMEA",
+    "region": "Europe",
+    "subregion": "Northern Europe",
+    "percentage": 2
+  },
+  {
+    "country_code": "FI",
+    "alpha3": "FIN",
+    "name": "Finland",
+    "longitude": 25.7481511,
+    "latitude": 61.92410999999999,
+    "world_region": "EMEA",
+    "region": "Europe",
+    "subregion": "Northern Europe",
     "percentage": 2
   },
   {
@@ -154,36 +176,14 @@
     "percentage": 2
   },
   {
-    "country_code": "PE",
-    "alpha3": "PER",
-    "name": "Peru",
-    "longitude": -75.015152,
-    "latitude": -9.189967,
-    "world_region": "AMER",
-    "region": "Americas",
-    "subregion": "South America",
-    "percentage": 1
-  },
-  {
-    "country_code": "CY",
-    "alpha3": "CYP",
-    "name": "Cyprus",
-    "longitude": 33.429859,
-    "latitude": 35.126413,
-    "world_region": "EMEA",
-    "region": "Asia",
-    "subregion": "Western Asia",
-    "percentage": 1
-  },
-  {
-    "country_code": "PT",
-    "alpha3": "PRT",
-    "name": "Portugal",
-    "longitude": -8.224454,
-    "latitude": 39.39987199999999,
+    "country_code": "EE",
+    "alpha3": "EST",
+    "name": "Estonia",
+    "longitude": 25.0136071,
+    "latitude": 58.595272,
     "world_region": "EMEA",
     "region": "Europe",
-    "subregion": "Southern Europe",
+    "subregion": "Northern Europe",
     "percentage": 1
   },
   {
@@ -198,14 +198,25 @@
     "percentage": 1
   },
   {
-    "country_code": "NG",
-    "alpha3": "NGA",
-    "name": "Nigeria",
-    "longitude": 8.675277,
-    "latitude": 9.081999,
+    "country_code": "ME",
+    "alpha3": "MNE",
+    "name": "Montenegro",
+    "longitude": 19.37439,
+    "latitude": 42.708678,
+    "world_region": "EMEA",
+    "region": "Europe",
+    "subregion": "Southern Europe",
+    "percentage": 1
+  },
+  {
+    "country_code": "MG",
+    "alpha3": "MDG",
+    "name": "Madagascar",
+    "longitude": 46.869107,
+    "latitude": -18.766947,
     "world_region": "EMEA",
     "region": "Africa",
-    "subregion": "Western Africa",
+    "subregion": "Eastern Africa",
     "percentage": 1
   },
   {
@@ -217,28 +228,6 @@
     "world_region": "AMER",
     "region": "Americas",
     "subregion": "Northern America",
-    "percentage": 1
-  },
-  {
-    "country_code": "BG",
-    "alpha3": "BGR",
-    "name": "Bulgaria",
-    "longitude": 25.48583,
-    "latitude": 42.733883,
-    "world_region": "EMEA",
-    "region": "Europe",
-    "subregion": "Eastern Europe",
-    "percentage": 1
-  },
-  {
-    "country_code": "CZ",
-    "alpha3": "CZE",
-    "name": "Czechia",
-    "longitude": 15.472962,
-    "latitude": 49.81749199999999,
-    "world_region": "EMEA",
-    "region": "Europe",
-    "subregion": "Eastern Europe",
     "percentage": 1
   },
   {
@@ -330,39 +319,6 @@
     "percentage": 1
   },
   {
-    "country_code": "IE",
-    "alpha3": "IRL",
-    "name": "Ireland",
-    "longitude": -7.692053599999999,
-    "latitude": 53.1423672,
-    "world_region": "EMEA",
-    "region": "Europe",
-    "subregion": "Northern Europe",
-    "percentage": 1
-  },
-  {
-    "country_code": "HR",
-    "alpha3": "HRV",
-    "name": "Croatia",
-    "longitude": 15.2000001,
-    "latitude": 45.1,
-    "world_region": "EMEA",
-    "region": "Europe",
-    "subregion": "Southern Europe",
-    "percentage": 1
-  },
-  {
-    "country_code": "EE",
-    "alpha3": "EST",
-    "name": "Estonia",
-    "longitude": 25.0136071,
-    "latitude": 58.595272,
-    "world_region": "EMEA",
-    "region": "Europe",
-    "subregion": "Northern Europe",
-    "percentage": 1
-  },
-  {
     "country_code": "GR",
     "alpha3": "GRC",
     "name": "Greece",
@@ -371,6 +327,83 @@
     "world_region": "EMEA",
     "region": "Europe",
     "subregion": "Southern Europe",
+    "percentage": 1
+  },
+  {
+    "country_code": "PE",
+    "alpha3": "PER",
+    "name": "Peru",
+    "longitude": -75.015152,
+    "latitude": -9.189967,
+    "world_region": "AMER",
+    "region": "Americas",
+    "subregion": "South America",
+    "percentage": 1
+  },
+  {
+    "country_code": "FR",
+    "alpha3": "FRA",
+    "name": "France",
+    "longitude": 2.213749,
+    "latitude": 46.227638,
+    "world_region": "EMEA",
+    "region": "Europe",
+    "subregion": "Western Europe",
+    "percentage": 1
+  },
+  {
+    "country_code": "CY",
+    "alpha3": "CYP",
+    "name": "Cyprus",
+    "longitude": 33.429859,
+    "latitude": 35.126413,
+    "world_region": "EMEA",
+    "region": "Asia",
+    "subregion": "Western Asia",
+    "percentage": 1
+  },
+  {
+    "country_code": "PT",
+    "alpha3": "PRT",
+    "name": "Portugal",
+    "longitude": -8.224454,
+    "latitude": 39.39987199999999,
+    "world_region": "EMEA",
+    "region": "Europe",
+    "subregion": "Southern Europe",
+    "percentage": 1
+  },
+  {
+    "country_code": "BG",
+    "alpha3": "BGR",
+    "name": "Bulgaria",
+    "longitude": 25.48583,
+    "latitude": 42.733883,
+    "world_region": "EMEA",
+    "region": "Europe",
+    "subregion": "Eastern Europe",
+    "percentage": 1
+  },
+  {
+    "country_code": "ZA",
+    "alpha3": "ZAF",
+    "name": "South Africa",
+    "longitude": 22.937506,
+    "latitude": -30.559482,
+    "world_region": "EMEA",
+    "region": "Africa",
+    "subregion": "Southern Africa",
+    "percentage": 1
+  },
+  {
+    "country_code": "IE",
+    "alpha3": "IRL",
+    "name": "Ireland",
+    "longitude": -7.692053599999999,
+    "latitude": 53.1423672,
+    "world_region": "EMEA",
+    "region": "Europe",
+    "subregion": "Northern Europe",
     "percentage": 1
   },
   {

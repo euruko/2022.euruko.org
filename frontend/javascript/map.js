@@ -3,6 +3,8 @@ __webpack_public_path__ = "/_bridgetown/static/js/";
 function buildLegend(props) {
   const { svgElement, data, valueExtent } = props;
 
+  console.log({ data });
+
   const legendList = document.createElement("ol");
   legendList.classList.add("map__legend");
   svgElement.insertAdjacentElement("afterend", legendList);

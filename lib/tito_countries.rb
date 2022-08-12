@@ -63,14 +63,14 @@ class TitoCountries
       percentage = percentage >= 1 ? percentage.round : 1
 
       countries.push({
-        country_code: country_code,
-        alpha3: country.alpha3,
-        name: country.common_name,
-        longitude: country.longitude,
-        latitude: country.latitude,
-        world_region: country.world_region,
-        region: country.region,
-        subregion: country.subregion,
+        country_code: country_code || "XX",
+        alpha3: country&.alpha3 || "XXX" ,
+        name: country&.common_name || "Unknown" ,
+        longitude: country&.longitude || 0,
+        latitude: country&.latitude || 0,
+        world_region: country&.world_region || "Unknown",
+        region: country&.region || "Unknown",
+        subregion: country&.subregion || "Unknown",
         percentage: percentage
       })
 
