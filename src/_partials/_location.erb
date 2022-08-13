@@ -1,7 +1,7 @@
 <section id="location" class="section section--background">
   <img
     class="section__background"
-    src="{% webpack_path images/location/history.jpg %}"
+    src="<%= webpack_path "images/location/history.jpg" %>"
     alt="alt"
     loading="lazy"
   />
@@ -19,7 +19,9 @@
         </div>
         <div class="section__large-column">
           <div class="section__content">
-            {{ content }}
+            <%= markdownify do %>
+              Euruko 2022 will be held at the historic Paasitorni venue. The ruggedly beautiful granite building is in Hakaniemi, right in the centre of Helsinki. It is connected to the Scandic Paasi hotel right next door. The venue is accessible to wheelchair users, but if you have any questions please [get in touch with the venue](https://www.paasitorni.fi/en/contact/) or the Euruko 2022 organisers.
+            <% end %>
 
             <a
               href="https://www.paasitorni.fi/en"
