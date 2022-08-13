@@ -22,14 +22,13 @@
   <span class="profile__name">
     <%= speaker.data.name %>
   </span>
-  <%- speaker.relations.talks.each do |talk| %>
-    <%= link_to talk.data.title, talk, class: "profile__talk_title" %>
+  <%- if (talk = speaker.relations.talk).present? %>
+    <span class="profile__talk_title"><%= talk.data.title %></span>
   <%- end %>
 <% end %>
 
 <div class="speakers__profile">
-  <!-- TODO: add the bio -->
-  <% url = speaker.data.twitter || speaker.data.url || speaker.data.github %>
+  <%- url = url_for(speaker.relations.talk) if speaker.relations.talk.present? %>
   <% if !url.blank? %>
     <a
       href="<%= url %>"

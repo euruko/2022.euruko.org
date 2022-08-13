@@ -41,7 +41,7 @@ collections:
   speakers:
     output: false
     relations:
-      has_many: talks
+      has_one: talk
   talks:
     layout: page
     permalink: /schedule/:group/:speaker_or_slug/
