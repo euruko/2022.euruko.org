@@ -247,6 +247,11 @@
     }
   }
 
+  &__travel {
+    font-style: italic;
+    max-width: 320px;
+  }
+
   &__cta {
     display: inline-block;
     font-size: 12px;

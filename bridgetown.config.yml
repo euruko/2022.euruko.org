@@ -47,11 +47,15 @@ collections:
     permalink: /schedule/:group/:speaker_or_slug/
     output: true
     relations:
-      belongs_to: speaker
+      belongs_to:
+        - speaker
+        - sponsor
   benefits:
     output: false
   sponsors:
     output: false
+    relations:
+      has_many: talks
 
 include:
   - .nojekyll

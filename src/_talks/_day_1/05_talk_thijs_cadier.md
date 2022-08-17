@@ -4,6 +4,7 @@ group: Day 1
 start_time: 2022-10-13T11:20:00+0300
 end_time: 2022-10-13T12:00:00+0300
 speaker: thijs_cadier
+sponsor: appsignal
 published: true
 linkable: true
 ics: true

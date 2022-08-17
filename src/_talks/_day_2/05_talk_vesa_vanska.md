@@ -4,6 +4,7 @@ group: Day 2
 start_time: 2022-10-14T11:20:00+0300
 end_time: 2022-10-14T12:00:00+0300
 speaker: vesa_vanska
+sponsor: kisko
 published: true
 linkable: true
 ics: true

@@ -4,6 +4,7 @@ group: Day 1
 start_time: 2022-10-13T13:00:00+0300
 end_time: 2022-10-13T13:40:00+0300
 speaker: mel_kaulfuss
+sponsor: buildkite
 published: true
 linkable: true
 ics: true

@@ -14,7 +14,7 @@
           </p>
         </div>
         <div class="section__very-large-column">
-          {% assign levels = "ruby, gold, silver, bronze, platform" | split: ", " %}
+          {% assign levels = "ruby, gold, silver, bronze, travel" | split: ", " %}
 
           {% for level in levels %}
             {% assign sponsors = collections.sponsors.resources | where: "data.level", level %}
