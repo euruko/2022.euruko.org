@@ -2,7 +2,7 @@
 name: Minecraft
 url: null
 category: benefits
-published: true
+published: false
 ---
 
 {% capture image %}{% webpack_path images/benefits/nina-photolab-6eL_lMJDwjM-unsplash.jpg %}{% endcapture %}
