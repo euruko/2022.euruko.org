@@ -2,6 +2,7 @@
 name: Minecraft
 url: null
 category: benefits
+color: green
 published: false
 ---
 

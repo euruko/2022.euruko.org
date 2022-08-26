@@ -1,6 +1,7 @@
 ---
 name: Helsinki
 category: benefits
+color: orange
 published: true
 ---
 

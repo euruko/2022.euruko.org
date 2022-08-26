@@ -2,6 +2,7 @@
 name: Catering
 url: null
 category: benefits
+color: green
 published: true
 ---
 

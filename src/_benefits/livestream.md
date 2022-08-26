@@ -3,6 +3,7 @@ title: Livestreaming
 name: Livestreaming and conference platform
 url: null
 category: benefits
+color: blue
 published: true
 ---
 

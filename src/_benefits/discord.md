@@ -2,6 +2,7 @@
 name: Discord
 url: null
 category: benefits
+color: discord
 published: true
 ---
 
