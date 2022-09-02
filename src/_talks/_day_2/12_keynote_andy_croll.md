@@ -4,6 +4,7 @@ group: Day 2
 start_time: 2022-10-14T15:20:00+0300
 end_time: 2022-10-14T16:00:00+0300
 speaker: andy_croll
+sponsor: coveragebook
 published: true
 linkable: true
 ics: true
