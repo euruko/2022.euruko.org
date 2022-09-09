@@ -29,7 +29,7 @@ There’s a long tradition to keep Euruko tickets as affordable as possible to o
 | Level                                    | Bronze                    | Silver                 | Gold                   | Ruby                   |
 |------------------------------------------|---------------------------|------------------------|------------------------|------------------------|
 | Price                                    | €3,000                    | €5,000                 | €8,000                 | €12,000                |
-| Total number available                   | ∞                         | 8 (Booths sold out)    | 4 (Sold out)         | 2 (Sold out)   |
+| Total number available                   | SOLD OUT                        | SOLD OUT    | SOLD OUT         | SOLD OUT   |
 | Included virtual passes                  | 5                         | 10                     | 15                     | 20                     |
 | Included in-person passes                | 1                         | 2                      | 4                      | 6                      |
 | 20% discount on additional passes¹       | ✅                         | ✅                     | ✅                     | ✅                      |
