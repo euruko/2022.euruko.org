@@ -8,6 +8,8 @@ social_image: /images/social-tickets.png
 
 {% render "tickets/listing", site: site %}
 
+**⚠️ There are extremely few in-person tickets remaining (or perhaps none, depending on when you're reading this).**
+
 You may be required to wear a mask and/or present proof of vaccination. [Current recommendations and restrictions in Helsinki](https://www.hel.fi/helsinki/coronavirus-en/information/recommendations-and-restrictions-effective).
 
 By purchasing or accepting a ticket to the event you agree to follow the [Code of Conduct](/code) at all times during the conference.
