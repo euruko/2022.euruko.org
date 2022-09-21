@@ -39,3 +39,6 @@ yarn-debug.log*
 !.yarn/versions
 # Yarn Integrity file
 .yarn-integrity
+
+# Generated files
+brella_schedule.csv

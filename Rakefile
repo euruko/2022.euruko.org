@@ -49,6 +49,45 @@ end
 #   end
 # end
 
+namespace :brella do
+  desc "Generate a CSV schedule for Brella"
+  task schedule: :environment do
+    logger = TTY::Logger.new
+
+    logger.info("Reading the site")
+    site.read
+
+    headers = %w(id external_id start_time duration reservable title subtitle location content tags)
+    csv_path = File.expand_path("./brella_schedule.csv")
+
+    logger.info("Generating the CSV")
+    csv_string = CSV.generate do |csv|
+      csv << headers
+
+      site.collections.talks.resources.each do |talk|
+        start_time = talk.data.start_time.strftime("%Y-%m-%d %H:%M")
+        duration = (talk.data.end_time - talk.data.start_time).to_i / 60
+        reservable = talk.data.ics ? "FALSE" : "TRUE"
+        subtitle = talk.relations.speaker ? "By #{talk.relations.speaker.data.name}" : ""
+        csv << [
+          "", "", start_time, duration,
+          reservable, talk.data.title, subtitle, "", talk.data.summary, ""
+        ]
+      end
+    end
+
+    logger.info("Writing to file", {
+      path: csv_path
+    })
+
+    File.open(csv_path, "wb") do |file|
+      file.write csv_string
+    end
+
+    logger.success("Done")
+  end
+end
+
 namespace :tito do
   desc "Update the attendee country stats"
   task :country_stats, [:account_slug, :event_slug] do |_task, args|
