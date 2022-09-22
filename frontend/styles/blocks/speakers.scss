@@ -3,9 +3,16 @@
 
 .speakers {
   &__profiles {
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
     margin: -60px -2% 0 -2%;
+    gap: 0rem 2rem;
+    padding: 1rem;
+  }
+  @include mq.mq($until: desktop) {
+    &__profiles {
+      grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    }
   }
 
   &__profile {
