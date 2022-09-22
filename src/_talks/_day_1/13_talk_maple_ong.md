@@ -4,6 +4,7 @@ group: Day 1
 start_time: 2022-10-13T15:50:00+0300
 end_time: 2022-10-13T16:30:00+0300
 speaker: maple_ong
+sponsor: wnb
 published: true
 linkable: true
 ics: true
