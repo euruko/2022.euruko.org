@@ -11,9 +11,20 @@
         Say hi to our wonderful speakers!
       </p>
       <div class="speakers__profiles">
-        <%- categories = %w(keynote mc normal lightning cfp tba) %>
+        <%- categories = %w(keynote mc) %>
 
-        <%- %w(keynote mc normal lightning cfp tba).each do |category| %>
+        <%- %w(keynote mc).each do |category| %>
+          <%- speakers = collections.speakers.resources.find_all { _1.published? && _1.data.category == category } %>
+          <%- speakers.reverse! if category == "keynote" %>
+          <%- speakers.each do |speaker| %>
+            <%= render "speaker", speaker: speaker %>
+          <%- end %>
+        <%- end %>
+      </div>
+      <div class="speakers__profiles">
+        <%- categories = %w(normal lightning cfp tba) %>
+
+        <%- %w(normal lightning cfp tba).each do |category| %>
           <%- speakers = collections.speakers.resources.find_all { _1.published? && _1.data.category == category } %>
           <%- speakers.reverse! if category == "keynote" %>
           <%- speakers.each do |speaker| %>
