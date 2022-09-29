@@ -70,7 +70,11 @@
       max-height: 100px;
       contain-intrinsic-size: 200px 100px;
     }
-
+    &--community {
+      .sponsors__tag {
+        background: $blue-1;
+      }
+    }
     &--bronze {
       .sponsors__tag {
         background: $bronze;
@@ -115,7 +119,8 @@
 
     &--bronze,
     &--silver,
-    &--travel {
+    &--travel,
+    &--community {
       .sponsors__link {
         flex-basis: auto;
         justify-content: center;
