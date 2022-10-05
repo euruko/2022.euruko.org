@@ -5,7 +5,7 @@ individual:
     - name: Virtual ticket
       price: 60
       url: https://ti.to/helsinki-ruby/euruko/with/g37koq5mrlm
-    - name: In-person ticket
+    - name: ⛔️ In-person (sold out)
       price: 120
       url: https://ti.to/helsinki-ruby/euruko/with/in-person
 corporate:
@@ -15,13 +15,13 @@ corporate:
     - name: Virtual ticket
       price: 90
       url: https://ti.to/helsinki-ruby/euruko/with/corporate-virtual-ticket
-    - name: In-person ticket
+    - name: ⛔️ In-person (sold out)
       price: 180
       url: https://ti.to/helsinki-ruby/euruko/with/corporate-in-person-ticket
 supporter:
   title: "Supporter"
   description: "Show some extra love for Euruko and include your name in a list of supporters on this site."
   list:
-    - name: Supporter ticket
+    - name: ⛔️ Supporter (sold out)
       price: 240
       url: https://ti.to/helsinki-ruby/euruko/with/oasablg7hfm
