@@ -71,6 +71,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@justinribeiro/lite-youtube@npm:^1.4.0":
+  version: 1.4.0
+  resolution: "@justinribeiro/lite-youtube@npm:1.4.0"
+  checksum: 39db550f0fefad37deb7b47f7539a706326e93b3b368926c2900a83ec8c565d7ebbca2b94721dd0022a21dfcc7578fb26ca70974a586db57e9f583556a22394a
+  languageName: node
+  linkType: hard
+
 "@nodelib/fs.scandir@npm:2.1.5":
   version: 2.1.5
   resolution: "@nodelib/fs.scandir@npm:2.1.5"
@@ -1503,6 +1510,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "euruko2022@workspace:."
   dependencies:
+    "@justinribeiro/lite-youtube": ^1.4.0
     clipboard: ^2.0.11
     copy-webpack-plugin: ^9.0.1
     css-loader: ^4.3.0

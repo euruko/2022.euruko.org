@@ -1,0 +1,33 @@
+<section id="video" class="section video">
+  <div class="section__container">
+    <div class="section__inner-container">
+      <div class="section__columns">
+        <div class="section__small-column">
+          <h1 id="heading-video" class="section__heading section__heading--teal">
+            Livestreams
+          </h1>
+          <p class="section__video">
+            Watch the Euruko 2022 livestreams here. If you have a ticket to Euruko 2022, log into Brella to get access to more features.
+            <br/>
+          </p>
+        </div>
+        <div class="section__large-column">
+          <div class="section__content">
+            <p>The videos are also available through the
+              <a href="https://www.youtube.com/euruko">Euruko YouTube channel</a>.</p>
+            <div class="video__grid">
+              {% for video in site.data.videos %}
+                <div class="video__container">
+                  <p class="video__label">
+                    {{ video.name }}
+                  </p>
+                  <lite-youtube videoid="{{ video.id }}" videotitle="{{ video.name }}"></lite-youtube>
+                </div>
+              {% endfor %}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
