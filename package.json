@@ -8,7 +8,7 @@
     "clean": "bin/bridgetown clean",
     "webpack-build": "webpack --mode production",
     "webpack-dev": "webpack --mode development -w",
-    "deploy": "yarn clean && yarn webpack-build && yarn build",
+    "deploy": "bin/bridgetown deploy",
     "test": "BRIDGETOWN_ENV=test bin/bridgetown test"
   },
   "devDependencies": {
