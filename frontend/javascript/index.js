@@ -1,7 +1,7 @@
 import smoothscroll from "smoothscroll-polyfill";
 import formatDistanceToNow from "date-fns/formatDistanceToNow";
 import ClipboardJS from "clipboard";
-import "@justinribeiro/lite-youtube";
+import "lite-youtube-embed";
 
 import "map.js";
 
