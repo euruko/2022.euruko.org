@@ -23,7 +23,7 @@ You’ll learn:
 - How to define SLOs and SLIs for your build, testing and deployment processes
 - How to use them to effectively drive continuous improvement
 - How to approach your CI/CD architecture just as you would your production systems:
-  -Availability & Uptime on self managed cloud hosted servers
-- Performance & Speed with job parallelisation and autoscaling clusters
-- Abstraction & Extensibility by managing infrastructure as code
-- Observability & Insights via access to useful data, real time monitors and metrics
+  - Availability & Uptime on self managed cloud hosted servers
+  - Performance & Speed with job parallelisation and autoscaling clusters
+  - Abstraction & Extensibility by managing infrastructure as code
+  - Observability & Insights via access to useful data, real time monitors and metrics
