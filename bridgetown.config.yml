@@ -55,6 +55,8 @@ collections:
     output: false
     relations:
       has_many: talks
+  jobs:
+    output: false
 
 include:
   - .nojekyll

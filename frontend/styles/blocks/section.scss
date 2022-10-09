@@ -294,6 +294,16 @@
       }
     }
 
+    &--pink {
+      background: $pink;
+      border: none;
+
+      &:hover {
+        background: $pink-light;
+        color: $grey-1;
+      }
+    }
+
     &--teal {
       background: $teal;
       border: none;

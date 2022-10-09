@@ -1,0 +1,21 @@
+---
+layout: page
+title: Job Board
+description: Check out these cool opportunities from our sponsors
+date: 2022-05-07T09:00:00Z
+---
+
+<% collections.jobs.resources.each do |job| %>
+  <div class="jobs">
+    <div class="jobs__company-logo">
+      <img
+        src="<%= webpack_path(job.data.logo_path) %>"
+        alt="<%= job.data.name %>"
+        loading="lazy"
+      />
+    </div>
+    <div class="jobs__company-jobs">
+      <%= job.content %>
+    </div>
+  </div>
+<% end %>
