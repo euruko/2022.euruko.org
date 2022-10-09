@@ -1,7 +1,7 @@
 ---
 name: Shopify
 level: ruby
-url: https://www.shopify.com/
+url: https://smrtr.io/bsVsV
 show_description: true
 published: true
 ---
