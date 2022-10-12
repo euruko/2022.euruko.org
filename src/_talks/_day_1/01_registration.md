@@ -1,5 +1,5 @@
 ---
-title: Doors open & registration
+title: Doors open, registration & breakfast
 group: Day 1
 start_time: 2022-10-13T09:00:00+0300
 end_time: 2022-10-13T10:00:00+0300
