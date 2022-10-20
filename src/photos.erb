@@ -1,0 +1,17 @@
+---
+layout: page
+title: Photos
+description: Photos from Euruko 2022
+date: 2022-10-20T09:00:00Z
+social_image: /images/social-photos.png
+---
+
+Photos by [Joni Alhonen](http://ja-media.net).
+
+<section id="gallery" class="photos">
+  <% site.data.photos.each do |photo| %>
+    <a href="<%= webpack_path "images/photos/#{photo.image}" %>" data-pswp-width="<%= photo.width %>" data-pswp-height="<%= photo.height %>" target="_blank">
+      <img src="<%= webpack_path "images/photos/thumbnails/#{photo.image}" %>" alt="<%= photo.alt %>">
+    </a>
+  <% end %>
+</section>

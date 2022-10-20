@@ -2,6 +2,7 @@ import smoothscroll from "smoothscroll-polyfill";
 import formatDistanceToNow from "date-fns/formatDistanceToNow";
 import ClipboardJS from "clipboard";
 import "lite-youtube-embed";
+import PhotoSwipeLightbox from "photoswipe/lightbox";
 
 import "map.js";
 
@@ -24,9 +25,22 @@ window.addEventListener(
     linkDateBlocker();
     discountCodeApplicator();
     clipboardHandlers();
+    initPhotoGallery();
   },
   false
 );
+
+const initPhotoGallery = () => {
+  const gallery = document.getElementById("gallery");
+  if (gallery) {
+    const lightbox = new PhotoSwipeLightbox({
+      gallery: "#gallery",
+      children: "a",
+      pswpModule: () => import("photoswipe"),
+    });
+    lightbox.init();
+  }
+};
 
 const setScrollListener = () => {
   const header = document.getElementById("header");
