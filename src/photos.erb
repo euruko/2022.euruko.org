@@ -8,6 +8,8 @@ social_image: /images/social-photos.jpg
 
 Photos by [Joni Alhonen](http://ja-media.net).
 
+If you'd like to create your own merch, download the Euruko Helsinki logo: <a href="<%= webpack_path "images/logo/euruko-helsinki-white.svg" %>" download="euruko-helsinki-white.svg">white on transparent</a> or <a href="<%= webpack_path "images/logo/euruko-helsinki-black.svg" %>" download="euruko-helsinki-black.svg">black on transparent</a> (SVG).
+
 <section id="gallery" class="photos">
   <% site.data.photos.each do |photo| %>
     <a href="<%= webpack_path "images/photos/#{photo.image}" %>" data-pswp-width="<%= photo.width %>" data-pswp-height="<%= photo.height %>" target="_blank">
